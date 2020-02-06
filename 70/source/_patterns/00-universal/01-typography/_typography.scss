@@ -1,0 +1,237 @@
+// @file
+// Typography variables
+
+$font-size-base: 16px;
+
+// Font Families
+$font-family-primary: Arial, sans-serif;
+$font-family-secondary: Arial, sans-serif;
+$font-family-tertiary: Arial, sans-serif;
+$font-family-system: Arial, sans-serif;
+$font-family-monospace: Arial, monospace;
+
+@mixin set-font-family(
+  $font-family: $font-family-primary,
+  $font-family-print: $font-family
+) {
+  font-family: $font-family;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @if ($font-family-print != false) {
+    @media print {
+      font-family: $font-family-primary;
+    }
+  }
+}
+
+// Font Family Mixins
+@mixin display-font-family-primary {
+  @include set-font-family($font-family-primary);
+}
+
+@mixin display-font-family-secondary {
+  @include set-font-family($font-family-secondary);
+}
+
+@mixin display-font-family-tertiary {
+  @include set-font-family($font-family-tertiary);
+}
+
+@mixin display-font-family-system {
+  @include set-font-family($font-family-system);
+}
+
+// Base Font Settings
+@mixin display-font-primary-light {
+  @include display-font-family-primary;
+  font-weight: 300;
+}
+
+@mixin display-font-primary-regular {
+  @include display-font-family-primary;
+  font-weight: 400;
+}
+
+@mixin display-font-primary-semi {
+  @include display-font-family-primary;
+  font-weight: 600;
+}
+
+@mixin display-font-primary-bold {
+  @include display-font-family-primary;
+  font-weight: 700;
+}
+
+// Secondary Font Settings
+@mixin display-font-secondary-regular {
+  @include display-font-family-secondary;
+  font-weight: 400;
+}
+
+// Tertiary Font Settings
+@mixin display-font-tertiary-light {
+  @include display-font-family-tertiary;
+  letter-spacing: -0.5px;
+  font-weight: 300;
+}
+
+@mixin display-font-tertiary-regular {
+  @include display-font-family-tertiary;
+  letter-spacing: -0.5px;
+  font-weight: 400;
+}
+
+@mixin display-font-tertiary-bold {
+  @include display-font-family-tertiary;
+  letter-spacing: -0.5px;
+  font-weight: 700;
+}
+
+// Font Treatments
+@mixin display-headline1 {
+  @include display-font-primary-light;
+  font-size: 62px;
+  line-height: 1.354;
+
+  @media (max-width: $bp-medium) {
+    font-size: 46px;
+    line-height: 1.217;
+  }
+}
+
+@mixin display-headline2 {
+  @include display-font-primary-light;
+  font-size: 50px;
+  line-height: 1.28;
+
+  @media (max-width: $bp-medium) {
+    font-size: 32px;
+    line-height: 1.312;
+  }
+}
+
+@mixin display-headline3 {
+  @include display-font-primary-light;
+  font-size: 40px;
+  line-height: 1.3;
+
+  @media (max-width: $bp-medium) {
+    font-size: 24px;
+    line-height: 1.5;
+  }
+}
+
+@mixin display-headline4 {
+  @include display-font-primary-light;
+  font-size: 30px;
+  line-height: 1.4;
+
+  @media (max-width: $bp-medium) {
+    font-size: 22px;
+    line-height: 1.545;
+  }
+}
+
+@mixin display-headline5 {
+  @include display-font-primary-light;
+  font-size: 26px;
+  line-height: 1.461;
+
+  @media (max-width: $bp-medium) {
+    font-size: 20px;
+    line-height: 1.6;
+  }
+}
+
+@mixin display-headline6 {
+  @include display-font-primary-semi;
+  font-size: 20px;
+  line-height: 1.6;
+
+  @media (max-width: $bp-medium) {
+    font-size: 18px;
+    line-height: 1.555;
+  }
+}
+
+@mixin display-body-text {
+  @include display-font-primary-regular;
+  font-size: 20px;
+  line-height: 1.6;
+
+  @media (max-width: $bp-medium) {
+    font-size: 18px;
+    line-height: 1.555;
+  }
+}
+
+@mixin display-body-text-small {
+  @include display-font-primary-regular;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+@mixin display-body-text-large {
+  @include display-font-primary-regular;
+  font-size: 22px;
+  line-height: 1.6;
+
+  @media (max-width: $bp-medium) {
+    font-size: 20px;
+    line-height: 1.6;
+  }
+}
+
+@mixin display-button-text {
+  @include display-font-primary-semi;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+@mixin display-button-text-small {
+  @include display-font-primary-semi;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+@mixin display-button-round-text {
+  @include display-font-tertiary-bold;
+  font-size: 21px;
+  line-height: 1.2;
+}
+
+// Mimic
+b,
+strong {
+  font-weight: 700;
+}
+
+em {
+  font-style: oblique;
+}
+
+i {
+  font-style: italic;
+}
+
+small {
+  font-size: 0.8em;
+}
+
+big {
+  font-size: 1.2em;
+}
+
+dl dt {
+  font-weight: 700;
+}
+
+abbr {
+  text-transform: uppercase;
+}
+
+pre,
+code {
+  font-family: $font-family-monospace;
+}

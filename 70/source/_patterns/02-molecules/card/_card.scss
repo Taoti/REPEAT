@@ -1,0 +1,10 @@
+// @file
+
+.card {
+  display: flex;
+}
+
+.card__content {
+  background: $blue-light;
+  padding: 1em;
+}

@@ -1,0 +1,17 @@
+{% set css_classes = [
+  grid_block|default('grid-wrapper'),
+  grid_modifier|default('')
+] %}
+
+<div class="{{ css_classes|join(' ') }}">
+  {% block grid_content %}
+  	{% if rows %}
+    	{% for row in rows %}
+      	{{ row.content }}
+    	{% endfor %}
+
+    {% else %}
+			{{ grid_content }}
+		{% endif %}
+  {% endblock %}
+</div>

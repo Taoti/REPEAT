@@ -1,0 +1,9 @@
+// @file
+// Main styles
+
+@import '_patterns/00-universal/**/*.scss';
+@import '_patterns/01-atoms/**/*.scss';
+@import '_patterns/02-molecules/**/*.scss';
+@import '_patterns/03-organisms/**/*.scss';
+@import '_patterns/04-prototypes/**/*.scss';
+@import '_patterns/override';

@@ -1,0 +1,19 @@
+{% set css_classes = [
+  section_block|default('l-section'),
+  section_modifier|default(''),
+  section_background|default('')
+] %}
+
+<section class="{{ css_classes|join(' ') }}">
+  {% if constrain == true %}
+    <div class="l-constrain">
+  {% endif %}
+
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+    
+  {% if constrain == true %}  
+    </div>
+  {% endif %}
+</section>

@@ -1,0 +1,16 @@
+{
+	"name":             "taoti/repeat",
+	"description":      "Repeatable component library.",
+	"type":             "project",
+	"authors": [
+		{
+			"name":         "Taoti Creative",
+			"email":        "hello@taoti.com",
+			"homepage":     "https://www.taoti.com",
+			"role":         "Taotian"
+		}
+  	],
+	"require": {
+		"monolog/monolog": "1.0.*"
+	}
+}

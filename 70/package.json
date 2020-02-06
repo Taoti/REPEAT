@@ -1,0 +1,23 @@
+{
+  "name": "REPEAT-70",
+  "version": "0.1.0",
+  "description": "Repeatable component library.",
+  "private": true,
+  "themePath": ".",
+  "main": "gulpfile.js",
+  "browserslist": "> 3%, last 2 versions",
+  "devDependencies": {
+    "@pattern-lab/cli": "^1.0.1",
+    "@pattern-lab/core": "^3.0.5",
+    "@pattern-lab/engine-twig-php": "^3.0.3",
+    "@pattern-lab/uikit-workshop": "^1.0.4",
+    "autoprefixer": "^9.6.4",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sass-glob": "^1.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "postcss-assets": "^5.0.0"
+  }
+}

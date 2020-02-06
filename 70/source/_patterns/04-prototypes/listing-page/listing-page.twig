@@ -1,0 +1,13 @@
+{% embed "@organisms/grid/_grid.twig" with {
+  'grid_modifier': "grid-equal-4"
+} %}
+  {% block grid_content %}
+    {% for item in items %}
+      {% include "@molecules/info-block/_info-block.twig" with {
+        'info_block_title': item.title,
+        'info_block_text': item.text,
+        'info_block_button': "Button"
+      } %}
+    {% endfor %}
+  {% endblock %}
+{% endembed %}

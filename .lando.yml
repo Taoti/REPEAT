@@ -1,0 +1,26 @@
+name: REPEAT
+recipe: lamp
+config:
+  webroot: .
+
+events:
+  post-start:
+    - appserver: composer install
+
+services:
+  appserver:
+    run_as_root:
+      - curl -sL https://deb.nodesource.com/setup_10.x | bash -
+      - apt-get install -y nodejs
+      - npm install -global gulp-cli
+
+tooling:
+  npm:
+    service: appserver
+    cmd: cd /app/70 && npm
+  node:
+    service: appserver
+    cmd: cd /app/70 && node
+  gulp:
+    service: appserver
+    cmd: cd /app/70 && gulp

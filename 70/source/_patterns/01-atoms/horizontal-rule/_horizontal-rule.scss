@@ -1,0 +1,10 @@
+// @file
+// Horizontal rule styles.
+
+hr {
+  border: 1px solid $gray-white;
+  box-sizing: content-box;
+  height: 0;
+  margin: 1rem 0;
+  padding-bottom: -1px;
+}
