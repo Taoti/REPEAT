@@ -13,10 +13,10 @@
 * Concluded Drupal files should be separated from PL source folder
 
 ## Proposed Structure
-* Based on Nick's proposed plans from last week, modified to separate PL patterns from files intended for Drupal
+* Based on Nick's proposed plans from last week, modified to separate PL patterns (in source folder) from files intended for Drupal (in components folder)
 
 ```
-REPEAT/70
+REPEAT/70/
   components/
     drupal/
       paragraph-text-image/
@@ -65,7 +65,8 @@ REPEAT/70
 	* Organize SCSS into asset categories (see above)
 * Jeff
 	* Modify Mimic to account for import plan, (per Nick) possibly adjust gulp config, etc.
-	* Drupal integration - decide whether component would be better as a paragraph or a node, adjust variables accordingly
+	* Decide whether component would be better as a Drupal paragraph, node, etc.
+  * Adjust variables accordingly
 * Nick (as he spelled out last week)
 	* Create basic importer for the above
 	* Create example site
