@@ -19,7 +19,7 @@
 REPEAT/70/
   components/
     drupal/
-      paragraph-text-image/
+      paragraph-image-text/
         config/
           paragraph-image-text.yml
             * config yml without UUIDs
@@ -38,7 +38,7 @@ REPEAT/70/
           * cite specific reference to source/_patterns/...
           * plus list of pattern dependencies, i.e. atoms, molecules, etc.
     wordpress/
-      * structure needed to import component into WordPress
+      * structure needed to import components into WordPress
   source/
     _patterns/
       00-universal
