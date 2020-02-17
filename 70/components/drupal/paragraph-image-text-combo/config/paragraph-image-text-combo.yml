@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.image_text_full
+    - field.field.paragraph.image_text_combo.field_image
+    - field.field.paragraph.image_text_combo.field_title
+    - field.field.paragraph.image_text_combo.field_content
+    - field.field.paragraph.image_text_combo.field_button
+  module:
+    - link
+id: paragraph.image_text_combo
+targetEntityType: paragraph
+bundle: image_text_combo
+mode: image_text_full
+content:
+  field_content_text:
+  field_cta:
+  field_image:
+  field_title:
+hidden: {  }

@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  config:
+  module:
+    - link
+id: node.image_text_repeat
+targetEntityType: node
+bundle: image_text_repeat
+mode:
+content:
+  field_content_text:
+  field_cta:
+  field_image:
+  field_title:
+hidden: {  }

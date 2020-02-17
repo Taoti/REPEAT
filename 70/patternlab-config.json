@@ -67,7 +67,10 @@
     "wait": 1000
   },
   "starterkitSubDir": "dist",
-  "styleGuideExcludes": [],
+  "styleGuideExcludes": [
+    "drupal",
+    "wordpress"
+  ],
   "theme": {
     "color": "light",
     "density": "compact",
