@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.simple
+label: Simple
+targetEntityType: node
+cache: true

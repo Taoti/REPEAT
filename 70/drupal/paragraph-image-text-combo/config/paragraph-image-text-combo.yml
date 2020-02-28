@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.paragraph.image_text_full
+    - core.entity_view_mode.node.simple
     - field.field.paragraph.image_text_combo.field_image
     - field.field.paragraph.image_text_combo.field_title
     - field.field.paragraph.image_text_combo.field_content
@@ -12,7 +12,7 @@ dependencies:
 id: paragraph.image_text_combo
 targetEntityType: paragraph
 bundle: image_text_combo
-mode: image_text_full
+mode: simple
 content:
   field_content_text:
   field_cta:

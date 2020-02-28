@@ -51,8 +51,6 @@
 {% set attributes = attributes.addClass(classes) %}
 
 {#
- * See: source/_patterns/02-molecules/image-text-combo
- * 
  * Note: This template is intended as an example
  * Variables below are approximate
 #}
@@ -69,7 +67,7 @@
   {% block combo_content %}
     {% if content.field_title %}
       <h2 class="image-text-combo__title">
-        {{ content.field_title|field_value }}
+        {{ content.field_title }}
       </h2>
     {% endif %}
 
@@ -80,10 +78,9 @@
     {% endif %}
 
     {% if content.field_button %}
-      <a class="image-text-combo__button button-primary"
-        href="{{ content.field_button.url }}">
-        {{ content.field_button.label }}
-      </a>
+      <div class="image-text-combo__button">
+        {{ content.field_button }}
+      </div>
     {% endif %}
   {% endblock %}
 </div>
