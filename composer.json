@@ -1,0 +1,12 @@
+{
+    "name": "taoti/repeat",
+    "description": "Taoti repeatable components.",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Jimi Radabaugh"
+        }
+    ],
+    "minimum-stability": "dev",
+    "license": "proprietary"
+}
