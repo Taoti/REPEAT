@@ -9,15 +9,15 @@ body {
 # Label
 ----------------------------------------------------*/
 .start-label {
-  background: #893ec9;
-  border-top: 1px solid #fff;
+  background: #eee;
+  border-bottom: 1px solid #ccc;
   margin-bottom: 3em; }
 
 .start-label p {
-  color: #fff;
   margin-top: 0;
+  margin-bottom: 0;
   padding-top: 0.5em;
-  padding-bottom: 0.55em;
+  padding-bottom: 0.5em;
   padding-left: 20px; }
 
 .start-subheading {
