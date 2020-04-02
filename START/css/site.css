@@ -9,8 +9,8 @@ body {
 # Label
 ----------------------------------------------------*/
 .start-label {
-  background: #eee;
-  border-bottom: 1px solid #ccc;
+  background: #efefef;
+  border-bottom: 1px solid #ddd;
   margin-bottom: 3em; }
 
 .start-label p {

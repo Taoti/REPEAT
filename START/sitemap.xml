@@ -3,6 +3,10 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://taoti.github.io/REPEAT/START/categories/</loc>
+  </url>
+  
+  <url>
     <loc>https://taoti.github.io/REPEAT/START/grid/</loc>
   </url>
   
@@ -24,6 +28,10 @@
   
   <url>
     <loc>https://taoti.github.io/REPEAT/START/spacing/</loc>
+  </url>
+  
+  <url>
+    <loc>https://taoti.github.io/REPEAT/START/tags/</loc>
   </url>
   
   <url>
