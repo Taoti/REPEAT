@@ -1,0 +1,15 @@
+in-view:
+  remote: https://raw.githubusercontent.com/camwiegert/in-view/master/dist/in-view.min.js
+  version: "v0.6.1"
+  license:
+    url: https://github.com/camwiegert/in-view/blob/master/LICENSE
+    gpl-compatible: true
+  js:
+    js/vendor/in-view.min.js: { minified: true, weight: 0 }
+
+counterInview:
+  js:
+    js/counterInview.behavior.js: { minified: false, weight: 0 }
+  dependencies:
+    - core/jquery.once
+    - theme/in-view
