@@ -1,0 +1,94 @@
+.paragraph--type--impact-statistics {
+  padding: 0;
+
+  .field--type-text {
+    font-size: 1.6rem;
+  }
+}
+
+.impactstats__container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+}
+
+.impactstats__content {
+  width: 32%;
+}
+
+.impactstats__stats {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 47px;
+  width: 60%;
+}
+
+.impactstats_statscolumn {
+  flex: 1 0 33%;
+  padding: 0 1em;
+
+  @media screen and (max-width: 550px) {
+    + .impactstats_statscolumn {
+      margin-top: 4rem;
+    }
+  }
+}
+
+
+@media screen and (max-width: 800px) {
+  .impactstats__container {
+    flex-direction: column;
+  }
+
+  .impactstats__content,
+  .impactstats__stats {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .impactstats__stats {
+    flex-direction: column;
+  }
+
+  .impactstats__statscolumn {
+    width: 100%;
+  }
+}
+
+.styledValue {
+  margin-bottom: .4em;
+  height: .75em;
+  font-family: $font--decoration;
+  font-size: 7.18em;
+  line-height: .6;
+  display: inline-flex;
+  align-items: flex-end;
+  color: $color--stellgray;
+
+  strong {
+    font-weight: 500;
+  }
+
+  small {
+    font-size: 0.31em;
+  }
+
+  + p {
+    margin-top: 2.5em;
+  }
+
+  @media screen and (max-width: 1000px) {
+    font-size: 5em;
+  }
+
+  @media screen and (max-width: 800px) {
+    font-size: 7em;
+  }
+
+  @media screen and (max-width: 650px) {
+    font-size: 6em;
+  }
+}

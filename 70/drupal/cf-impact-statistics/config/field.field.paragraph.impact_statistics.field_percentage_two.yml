@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_percentage_two
+    - paragraphs.paragraphs_type.impact_statistics
+id: paragraph.impact_statistics.field_percentage_two
+field_name: field_percentage_two
+entity_type: paragraph
+bundle: impact_statistics
+label: Percentage
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: '%'
+field_type: integer
