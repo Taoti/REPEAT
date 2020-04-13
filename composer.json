@@ -4,9 +4,10 @@
     "type": "project",
     "authors": [
         {
-            "name": "Jimi Radabaugh"
+            "name": "Jimi Radabaugh",
+            "email": "jradabaugh@taoti.com"
         }
     ],
     "minimum-stability": "dev",
-    "license": "proprietary"
+    "license": "MIT"
 }
