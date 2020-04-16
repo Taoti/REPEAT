@@ -16,14 +16,15 @@ component/
   sass/
     _component-styles.scss
 
-  ** If using JS **
+* if using JS
   js/
     custom.js
     vendor/
       vendor.js
-  libraries.yml  -> appended to THEME/THEME.libraries.yml
+  libraries.yml  
+    -> appended to THEME/THEME.libraries.yml
 
-  ** If module dependencies **
+* if module dependencies exist
   extensions.yml
   composer.yml
 ```
