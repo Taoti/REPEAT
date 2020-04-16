@@ -1,8 +1,7 @@
 # Components
-* These docs will outline expectations for components in the REPEAT library
+* These docs will outline expectations for components in the REPEAT library. Current expected structure is as follows.
 
 ## Drupal Structure
-* Current expected structure for each component is as follows:
 ```
 component/
   config/
@@ -16,7 +15,7 @@ component/
   sass/
     _component-styles.scss
 
-* if using JS
+  *** if component uses JS ***
   js/
     custom.js
     vendor/
@@ -24,7 +23,7 @@ component/
   libraries.yml  
     -> appended to THEME/THEME.libraries.yml
 
-* if module dependencies exist
+  *** if module dependencies ***
   extensions.yml
   composer.yml
 ```

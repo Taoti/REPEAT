@@ -7,26 +7,26 @@ themes/theme-name
   templates/paragraphs (with an 's')
   sass/
   
-  * hfsa-d8, scai, usfs, ibhre, etc. (most common)
+    *** hfsa-d8, scai, usfs, ibhre, etc. (most common)
     0.config (missing in some)
     1.utilities
     2.global
     3.components
     4.content-types (new addition in some)
 
-  * creative-forces-d8 (slight variation)
+    *** creative-forces-d8 (slight variation)
     1.utilities
     2.global
     3.layout (replacing 3.components above)
     4.components (shifted to #4)
 
-  * fulbright-d8 (atomic design)
+    *** fulbright-d8 (atomic design)
     00-fundamentals
     01-atoms
     02-molecules
     03-organisms
 
-  * abt (another variation)
+    *** abt (another variation)
     base
     components
     layout
@@ -40,7 +40,7 @@ themes/theme-name/
   templates/paragraph (without an 's')
   NO sass folder
 
-* earth-lab-cu, arda, dcpcsb-d8, etc. (consistent structure for all copycat based themes)
+  *** earth-lab-cu, arda, dcpcsb-d8, etc. (consistent structure for all copycat based themes)
   source/
     _patterns/
       00-global
