@@ -12,6 +12,7 @@
 ## Atomic Design
 * In 2016, Brad Frost wrote an excellent book called [Atomic Design](https://atomicdesign.bradfrost.com/). Here's a summary:
 * "Atomic design is a methodology composed of five distinct stages working together to create interface design systems in a more deliberate and hierarchical manner."
+
 ```
 1.atoms
 2.molecules
@@ -28,6 +29,7 @@
 
 ### Modified Atomic Design
 * Copycat-based themes introduced a structure that was a (confusing) hybrid of Atomic Design and [SCMACSS](http://smacss.com/) (?)
+
 ```
 00-global
 01-base
@@ -38,6 +40,7 @@
 ```
 
 * In a recent secret project that will not be named, Alex, Jeff, and I converted a Copycat-based theme to a structure that was much closer to original Atomic Design.
+
 ```
 00-fundamentals (previously 'universal')
 01-atoms
@@ -53,8 +56,9 @@
   * [Awesome Design Systems](https://github.com/alexpate/awesome-design-systems) - aggregated list on GitHub
 
 ## Design Tokens
-* The concept of design tokens is worth mentioning here. [Firefox](https://design.firefox.com/photon/resources/design-tokens.html) has a good definition (below).
-* "A design token is an abstraction of a visual property such as color, font, width, animation, etc. These raw values are language application agnostic and once transformed and formatted can be used on any platform."
+* The concept of design tokens is worth mentioning here. Firefox has a good [definition](https://design.firefox.com/photon/resources/design-tokens.html) (below).
+  * "A design token is an abstraction of a visual property such as color, font, width, animation, etc. These raw values are language application agnostic and once transformed and formatted can be used on any platform."
+
 * Here's a fairly typical example in a visual format:
   * [Feelix Design Tokens](https://feelix.myob.com/#/Design%20tokens)
 
@@ -65,9 +69,9 @@
 * Drupal has a modular content model, which supports a high level of complexity. There are many specific terms to understand, including node, region, block, view, paragraph, etc.
   * [Drupal Docs: Modular Content](https://www.drupal.org/docs/user_guide/en/planning-modular.html)
   * [Drupal Docs: Planning your Content Structure](https://www.drupal.org/docs/user_guide/en/planning-structure.html)
-  * [Drupal Docs: Taxonomy](https://www.drupal.org/docs/user_guide/en/structure-taxonomy.html)
 
 * Here is an example Drupal page, edited for clarity (e.g. simplifying Drupalisms like 'views-view' to 'view' and so on)
+
 ```
 node--example-page
   region--header
@@ -89,6 +93,7 @@ node--example-page
   * [WordPress Template Hierarchy](https://developer.wordpress.org/files/2014/10/Screenshot-2019-01-23-00.20.04.png)
 
 * Here is an example WordPress page, using a simple page template with a sidebar.
+
 ```
 page-sidebar
   header
@@ -103,6 +108,7 @@ page-sidebar
 
 ### Expand Atomic Design
 * It was suggested during the meeting that expanding Atomic Design to include more levels of hierarchy could help avoid the problem of 'everything is a molecule' or 'everything is an organism'
+
 ```
 00-fundamentals
 01-atoms
@@ -125,6 +131,7 @@ page-sidebar
   * Foundations
   * Resources
   * ... (naming things is hard)
+
 ```
 components
   accordion
