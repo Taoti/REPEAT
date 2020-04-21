@@ -1,52 +1,91 @@
 # Themes
-* Currently, Taoti themes for Drupal 8 use different structures and naming conventions, collected here for reference.
+* Currently, Taoti themes use different structures and naming conventions, collected here for reference.
 
-## Mimic-based Themes
+## Drupal 8
+* Two basic flavors for Drupal 8 themes, Mimic-based, and Copycat-based (includes Pattern Lab integration)
+
+### Mimic-based
 ```
 themes/theme-name
-  templates/paragraphs (with an 's')
+  templates/
+    paragraphs/ (with an 's')
+      paragraph--component-name.html.twig
+  js/
+    component-name.js
+    vendor/
+      vendor.js
   sass/
-  
-    *** hfsa-d8, scai, usfs, ibhre, etc. (most common)
-    0.config (missing in some)
+
+    *** mimic (starter theme)
     1.utilities
     2.global
     3.components
-    4.content-types (new addition in some)
+      _component-name.scss
+
+    *** hfsa-d8, scai, usfs, ibhre, etc. (most common)
+    0.config (added)
+    1.utilities
+    2.global
+    3.components
+    4.content-types (added)
 
     *** creative-forces-d8 (slight variation)
     1.utilities
     2.global
-    3.layout (replacing 3.components above)
-    4.components (shifted to #4)
+    3.layout (replacing 3. above)
+    4.components (moved up to 4.)
 
-    *** fulbright-d8 (atomic design)
-    00-fundamentals
-    01-atoms
-    02-molecules
-    03-organisms
-
-    *** abt (another variation)
+    *** abt (older variation)
     base
     components
     layout
     print
     utilities
+
+    *** fulbright-d8 (atomic design, completely different)
+    00-fundamentals
+    01-atoms
+    02-molecules
+    03-organisms
+    04-prototypes
 ```
 
-## Copycat-based Themes
+### Copycat-based
 ```
 themes/theme-name/
-  templates/paragraph (without an 's')
-  NO sass folder
+  templates/
+    paragraph/ (without an 's')
+      paragraph--component-name.html.twig
+  js/
+    component-name.js
+    vendor/
+      vendor.js
+  source/ (NO sass folder)
 
-  *** earth-lab-cu, arda, dcpcsb-d8, etc. (consistent structure for all copycat based themes)
-  source/
+    *** copycat, arda, arda, dcpcsb-d8, etc. (consistent structure for all copycat based themes)
     _patterns/
       00-global
       01-base
       02-layouts
       03-components
+        _component-name.scss
       04-templates
       05-pages
+```
+
+## WordPress
+* Very consistent structure and naming across WordPress themes, yet very different compared to Drupal themes above.
+
+### JP-base
+```
+themes/theme-name
+  modules
+    componentName/    
+      js/
+        componentName.js
+      scss/
+        _componentName.scss
+      views/
+        componentName.twig
+      componentName.php
 ```
