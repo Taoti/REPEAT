@@ -42,7 +42,7 @@
 * In a recent secret project that will not be named, Alex, Jeff, and I converted a Copycat-based theme to a structure that was much closer to original Atomic Design.
 
 ```
-00-fundamentals (previously 'universal')
+00-fundamentals (aka 'universal')
 01-atoms
 02-molecules
 03-organisms
@@ -58,7 +58,6 @@
 ## Design Tokens
 * The concept of design tokens is worth mentioning here. Firefox has a good [definition](https://design.firefox.com/photon/resources/design-tokens.html) (below).
   * "A design token is an abstraction of a visual property such as color, font, width, animation, etc. These raw values are language application agnostic and once transformed and formatted can be used on any platform."
-
 * Here's a fairly typical example in a visual format:
   * [Feelix Design Tokens](https://feelix.myob.com/#/Design%20tokens)
 
@@ -66,19 +65,24 @@
 * It is also important to understand naming conventions in the specific CMS platforms we use, even if our internal naming conventions end up being platform agnostic.
 
 ### Drupal
-* Drupal has a modular content model, which supports a high level of complexity. There are many specific terms to understand, including node, region, block, view, paragraph, etc.
-  * [Drupal Docs: Modular Content](https://www.drupal.org/docs/user_guide/en/planning-modular.html)
-  * [Drupal Docs: Planning your Content Structure](https://www.drupal.org/docs/user_guide/en/planning-structure.html)
-
+* Drupal has a modular content model, which supports a high level of complexity. There are many specific terms to understand, including nodes, regions, content types, views, view modes, paragraphs, etc.
+  * [Drupal: Modular Content](https://www.drupal.org/docs/user_guide/en/planning-modular.html)
+  * [Drupal: Planning your Content Structure](https://www.drupal.org/docs/user_guide/en/planning-structure.html)
+  * [Drupal: Working with Content Types](https://www.drupal.org/docs/8/administering-drupal-8-site/managing-content-0/working-with-content-types-and-fields)
+  * [Drupal: Regions in a Theme](https://www.drupal.org/docs/user_guide/en/block-regions.html)
+  * [Drupal: Uses of Views](https://www.drupal.org/docs/user_guide/en/views-concept.html)
+  * [Drupal: View Modes](https://www.drupal.org/docs/user_guide/en/structure-view-modes.html) 
+  * [Drupal: Taxonomy](https://www.drupal.org/docs/user_guide/en/structure-taxonomy.html)
+  * [Drupal: Paragraphs](https://www.drupal.org/project/paragraphs)
 * Here is an example Drupal page, edited for clarity (e.g. simplifying Drupalisms like 'views-view' to 'view' and so on)
 
 ```
-node--example-page
+node--example-page--view-mode-default
   region--header
     block--branding
     block--main-menu
   region--content
-    view--grid-with-two-columns
+    view--listing-of-content
       paragraph--image-text
         field_image
         field_text
@@ -91,7 +95,6 @@ node--example-page
 ### WordPress
 * WordPress has a less complex content model compared to Drupal. Since WordPress started as a blogging platform, much of its default structure is still geared towards supporting blog posts.
   * [WordPress Template Hierarchy](https://developer.wordpress.org/files/2014/10/Screenshot-2019-01-23-00.20.04.png)
-
 * Here is an example WordPress page, using a simple page template with a sidebar.
 
 ```
@@ -99,8 +102,8 @@ page-sidebar
   header
   content
   sidebar
-    widget (e.g. 'recent posts')
-    widget (e.g. 'recent comments')}
+    widget-recent-posts
+    widget-recent-comments
   footer
 ```
 
