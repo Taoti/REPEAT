@@ -1,3 +1,58 @@
+/*----------------------------------------------------
+# Variables
+----------------------------------------------------*/
+$color-warmWhite: #faf7f4;
+$color-purple: #913592;
+$sidePaddingMax: 4rem;
+$wideInnerWidth: 1366px;
+
+/*----------------------------------------------------
+# Mixins
+----------------------------------------------------*/
+@mixin layoutInnerPadding() {
+  padding-left: $sidePaddingMax;
+  padding-right: $sidePaddingMax;
+
+  @media (max-width: $width-s) {
+    padding-left: $sidePaddingMax/4;
+    padding-right: $sidePaddingMax/4;
+  }
+}
+
+@mixin layoutMaxWidth() {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+
+  .scrollbar-5 & { width: calc(100vw - 5px); }
+  .scrollbar-12 & { width: calc(100vw - 12px); }
+  .scrollbar-15 & { width: calc(100vw - 15px); }
+  .scrollbar-17 & { width: calc(100vw - 17px); }
+}
+
+@mixin layoutContent() {
+  @include layoutInnerPadding();
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: calc(#{$wideInnerWidth} + (#{$sidePaddingMax * 2}));
+
+  .browser-ie & {
+    max-width: $wideInnerWidth + 100px;
+  }
+
+  @media #{$mobile} {
+    max-width: 100%;
+
+    .browser-ie & {
+      overflow-x: hidden; // prevents overflow on IE/Edge
+    }
+  }
+}
+
+/*----------------------------------------------------
+# Component
+----------------------------------------------------*/
 .field-item.paragraphItem-q-a {
   @include layoutMaxWidth();
 
@@ -20,7 +75,7 @@
 
       ol.paragraphQA-questions {
         color: $color-purple;
-        font-weight: $fontweight-muli-bold;
+        font-weight: bold;
 
         .paragraphItem-question-answer-pair {
           margin-bottom: 1rem;
@@ -47,12 +102,12 @@
 
         .link-backToTop a {
           font-size: 0.85rem;
-          font-weight: $fontweight-muli-semibold;
+          font-weight: bold;
         }
 
         .fieldName-field-answer {
           margin-top: 1.5rem;
-          font-weight: $fontweight-muli-regular;
+          font-weight: normal;
         }
       }
     }
