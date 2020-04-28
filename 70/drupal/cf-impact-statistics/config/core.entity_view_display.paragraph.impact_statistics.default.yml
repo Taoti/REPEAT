@@ -1,0 +1,84 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.impact_statistics.field_percentage_one
+    - field.field.paragraph.impact_statistics.field_percentage_three
+    - field.field.paragraph.impact_statistics.field_percentage_two
+    - field.field.paragraph.impact_statistics.field_shortdescription_one
+    - field.field.paragraph.impact_statistics.field_shortdescription_three
+    - field.field.paragraph.impact_statistics.field_shortdescription_two
+    - field.field.paragraph.impact_statistics.field_subheading
+    - field.field.paragraph.impact_statistics.field_title
+    - paragraphs.paragraphs_type.impact_statistics
+  module:
+    - text
+id: paragraph.impact_statistics.default
+targetEntityType: paragraph
+bundle: impact_statistics
+mode: default
+content:
+  field_percentage_one:
+    weight: 2
+    label: hidden
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_percentage_three:
+    weight: 5
+    label: hidden
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_percentage_two:
+    weight: 4
+    label: hidden
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_shortdescription_one:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_shortdescription_three:
+    weight: 7
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_shortdescription_two:
+    weight: 6
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_subheading:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

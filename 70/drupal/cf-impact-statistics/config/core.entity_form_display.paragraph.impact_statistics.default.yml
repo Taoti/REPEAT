@@ -1,0 +1,162 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.impact_statistics.field_percentage_one
+    - field.field.paragraph.impact_statistics.field_percentage_three
+    - field.field.paragraph.impact_statistics.field_percentage_two
+    - field.field.paragraph.impact_statistics.field_shortdescription_one
+    - field.field.paragraph.impact_statistics.field_shortdescription_three
+    - field.field.paragraph.impact_statistics.field_shortdescription_two
+    - field.field.paragraph.impact_statistics.field_subheading
+    - field.field.paragraph.impact_statistics.field_title
+    - paragraphs.paragraphs_type.impact_statistics
+  module:
+    - field_group
+    - text
+third_party_settings:
+  field_group:
+    group_tabs:
+      children:
+        - group_content
+        - group_percentage_1
+        - group_percentage_2
+        - group_percentage_3
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      format_settings:
+        id: ''
+        classes: ''
+        direction: vertical
+      label: Tabs
+      region: content
+    group_content:
+      children:
+        - field_title
+        - field_subheading
+      parent_name: group_tabs
+      weight: 11
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: open
+        required_fields: true
+      label: Content
+      region: content
+    group_percentage_1:
+      children:
+        - field_percentage_one
+        - field_shortdescription_one
+      parent_name: group_tabs
+      weight: 12
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: 'Percentage #1'
+      region: content
+    group_percentage_2:
+      children:
+        - field_percentage_two
+        - field_shortdescription_two
+      parent_name: group_tabs
+      weight: 13
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: 'Percentage #2'
+      region: content
+    group_percentage_3:
+      children:
+        - field_percentage_three
+        - field_shortdescription_three
+      parent_name: group_tabs
+      weight: 14
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: 'Percentage #3'
+      region: content
+id: paragraph.impact_statistics.default
+targetEntityType: paragraph
+bundle: impact_statistics
+mode: default
+content:
+  field_percentage_one:
+    weight: 1
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_percentage_three:
+    weight: 5
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_percentage_two:
+    weight: 4
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_shortdescription_one:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+  field_shortdescription_three:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+  field_shortdescription_two:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+  field_subheading:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

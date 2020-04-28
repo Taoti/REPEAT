@@ -1,0 +1,60 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_question_answer_pair
+    - paragraphs.paragraphs_type.q_a
+    - paragraphs.paragraphs_type.question_answer_pair
+  module:
+    - entity_reference_revisions
+id: paragraph.q_a.field_question_answer_pair
+field_name: field_question_answer_pair
+entity_type: paragraph
+bundle: q_a
+label: 'Question & Answer Pair'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      question_answer_pair: question_answer_pair
+    target_bundles_drag_drop:
+      announcement:
+        weight: 12
+        enabled: false
+      emergency_coordinates:
+        weight: 13
+        enabled: false
+      emergency_statistics:
+        weight: 14
+        enabled: false
+      file_upload:
+        weight: 15
+        enabled: false
+      guidance_notes_references:
+        weight: 16
+        enabled: false
+      key_actions:
+        weight: 17
+        enabled: false
+      q_a:
+        weight: 18
+        enabled: false
+      question_answer_pair:
+        enabled: true
+        weight: 19
+      resource:
+        weight: 20
+        enabled: false
+      section_references:
+        weight: 21
+        enabled: false
+      text:
+        weight: 22
+        enabled: false
+field_type: entity_reference_revisions

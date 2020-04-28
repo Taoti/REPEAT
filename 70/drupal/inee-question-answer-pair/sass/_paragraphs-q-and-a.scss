@@ -1,0 +1,66 @@
+.field-item.paragraphItem-q-a {
+  @include layoutMaxWidth();
+
+  .paragraphType-q-a {
+    margin: 1.5rem auto;
+
+    // both things  
+    .paragraphQA-questions-wrapper,
+    .paragraphQA-answers-wrapper {
+      padding: 1.5rem 0;
+
+      .paragraphQA-content {
+        @include layoutContent();
+      }
+    }
+
+    // Questions
+    .paragraphQA-questions-wrapper {
+      background-color: $color-warmWhite;
+
+      ol.paragraphQA-questions {
+        color: $color-purple;
+        font-weight: $fontweight-muli-bold;
+
+        .paragraphItem-question-answer-pair {
+          margin-bottom: 1rem;
+
+          a {
+            padding-left: 0;
+            color: $color-purple;
+          }
+        }
+      }
+    }
+
+    // Questions and answers 
+    ol.paragraphQA-answers {
+      font-weight: $fontweight-muli-bold;
+      .paragraphItem-question-answer-pair {
+        margin-bottom: 2.3rem;
+        // full width lines don't behave well with li
+        // sample ::after code for full width lines found
+        // in the ct-page.scss 
+        .fieldName-field-question {
+          font-size: 1.1rem;
+        }
+
+        .link-backToTop a {
+          font-size: 0.85rem;
+          font-weight: $fontweight-muli-semibold;
+        }
+
+        .fieldName-field-answer {
+          margin-top: 1.5rem;
+          font-weight: $fontweight-muli-regular;
+        }
+      }
+    }
+  }
+
+  .fieldName-field-answer {
+    ol, ul {
+      margin-bottom: 1em;
+    }
+  }
+}
