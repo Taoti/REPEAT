@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: question_answer_pair
+label: 'Question & Answer Pair'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }
