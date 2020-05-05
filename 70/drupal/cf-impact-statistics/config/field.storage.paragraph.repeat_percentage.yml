@@ -4,8 +4,8 @@ dependencies:
   module:
     - options
     - paragraphs
-id: paragraph.field_percentage
-field_name: field_percentage
+id: paragraph.repeat_percentage
+field_name: repeat_percentage
 entity_type: paragraph
 type: list_string
 settings:

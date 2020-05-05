@@ -4,8 +4,8 @@ dependencies:
   module:
     - paragraphs
     - text
-id: paragraph.field_subheading
-field_name: field_subheading
+id: paragraph.repeat_subheading
+field_name: repeat_subheading
 entity_type: paragraph
 type: text_long
 settings: {  }

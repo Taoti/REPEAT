@@ -2,19 +2,17 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_shortdescription_three
+    - field.storage.paragraph.repeat_title
     - paragraphs.paragraphs_type.impact_statistics
-  module:
-    - text
-id: paragraph.impact_statistics.field_shortdescription_three
-field_name: field_shortdescription_three
+id: paragraph.impact_statistics.repeat_title
+field_name: repeat_title
 entity_type: paragraph
 bundle: impact_statistics
-label: Description
+label: Title
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: text
+field_type: string

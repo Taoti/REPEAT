@@ -2,12 +2,12 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_subheading
+    - field.storage.paragraph.repeat_subheading
     - paragraphs.paragraphs_type.impact_statistics
   module:
     - text
-id: paragraph.impact_statistics.field_subheading
-field_name: field_subheading
+id: paragraph.impact_statistics.repeat_subheading
+field_name: repeat_subheading
 entity_type: paragraph
 bundle: impact_statistics
 label: Content

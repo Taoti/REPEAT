@@ -3,8 +3,8 @@ status: true
 dependencies:
   module:
     - paragraphs
-id: paragraph.field_percentage_one
-field_name: field_percentage_one
+id: paragraph.repeat_percentage_three
+field_name: repeat_percentage_three
 entity_type: paragraph
 type: integer
 settings:

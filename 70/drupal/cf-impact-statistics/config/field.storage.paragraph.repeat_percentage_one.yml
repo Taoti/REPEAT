@@ -3,14 +3,13 @@ status: true
 dependencies:
   module:
     - paragraphs
-id: paragraph.field_title
-field_name: field_title
+id: paragraph.repeat_percentage_one
+field_name: repeat_percentage_one
 entity_type: paragraph
-type: string
+type: integer
 settings:
-  max_length: 255
-  is_ascii: false
-  case_sensitive: false
+  unsigned: false
+  size: normal
 module: core
 locked: false
 cardinality: 1

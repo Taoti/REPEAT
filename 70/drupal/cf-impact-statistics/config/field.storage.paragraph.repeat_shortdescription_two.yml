@@ -3,14 +3,14 @@ status: true
 dependencies:
   module:
     - paragraphs
-id: paragraph.field_percentage_two
-field_name: field_percentage_two
+    - text
+id: paragraph.repeat_shortdescription_two
+field_name: repeat_shortdescription_two
 entity_type: paragraph
-type: integer
+type: text
 settings:
-  unsigned: false
-  size: normal
-module: core
+  max_length: 255
+module: text
 locked: false
 cardinality: 1
 translatable: true

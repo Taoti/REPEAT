@@ -2,10 +2,10 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_percentage_three
+    - field.storage.paragraph.repeat_percentage_three
     - paragraphs.paragraphs_type.impact_statistics
-id: paragraph.impact_statistics.field_percentage_three
-field_name: field_percentage_three
+id: paragraph.impact_statistics.repeat_percentage_three
+field_name: repeat_percentage_three
 entity_type: paragraph
 bundle: impact_statistics
 label: Percentage

@@ -4,8 +4,8 @@ dependencies:
   module:
     - paragraphs
     - text
-id: paragraph.field_shortdescription_two
-field_name: field_shortdescription_two
+id: paragraph.repeat_shortdescription_one
+field_name: repeat_shortdescription_one
 entity_type: paragraph
 type: text
 settings:
