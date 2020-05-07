@@ -9,20 +9,20 @@
   * [Quote](#quote)
   * [WYSIWYG](#wysiwyg)
 
-## Reference D8 Sites
-* [AAU EDU](https://dev-aau-edu.pantheonsite.io/)
-* [ABA](http://dev-aba-d8.pantheonsite.io/)
-* [Creative Forces](http://dev-creative-forces-d8.pantheonsite.io/)
-* [Field To Market](https://dev-field-to-market.pantheonsite.io)
-* [HFSA](https://dev-hfsa-d8.pantheonsite.io/)
-* [IBHRE](http://dev-ibhre.pantheonsite.io/)
-* [Scentair](https://dev-scentair.pantheonsite.io/)
-* [Security First](https://dev-security-first.pantheonsite.io/)
-* [USFS](https://dev-usfs.pantheonsite.io/)
+* Reference D8 Sites
+  * [AAU EDU](https://dev-aau-edu.pantheonsite.io/)
+  * [ABA](http://dev-aba-d8.pantheonsite.io/)
+  * [Creative Forces](http://dev-creative-forces-d8.pantheonsite.io/)
+  * [Field To Market](https://dev-field-to-market.pantheonsite.io)
+  * [HFSA](https://dev-hfsa-d8.pantheonsite.io/)
+  * [IBHRE](http://dev-ibhre.pantheonsite.io/)
+  * [Scentair](https://dev-scentair.pantheonsite.io/)
+  * [Security First](https://dev-security-first.pantheonsite.io/)
+  * [USFS](https://dev-usfs.pantheonsite.io/)
 
-## Code Block Notes
-* GitHub Pages generated errors when rendering this markdown file because both Twig and Liquid (used in Jekyll) use tags with '{' and '%'
-* As a result, the Twig examples below all use '(' or ')' when you would expect to see '{' or '}'
+* Code Block Notes
+  * GitHub Pages generated errors when rendering this markdown file because both Twig and Liquid (used in Jekyll) use tags with '{' and '}'
+  * As a result, the Twig examples below all use '(' or ')' when you would expect to see '{' or '}'
 
 ## Accordion
 * Mimic
@@ -34,7 +34,7 @@
 ### Mimic (Accordion - included in HFSA, IBHRE, USFS, etc.)
 * templates/paragraphs/paragraph--accordion.html.twig
 
-```twig
+```html
 <div(( attributes.addClass(classes) ))>
   (% block content %)
 
@@ -61,7 +61,7 @@
 ### Scentair (Accordion)
 * templates/paragraphs/paragraph--faq-accordion--default.html.twig
 
-```twig
+```html
 (% extends '@scentair/paragraphs/paragraph.html.twig' %)
 (% block content %)
   <section class="faq-accordion-section">
@@ -80,7 +80,7 @@
 
 * templates/paragraphs/paragraph--faq.html.twig
 
-```twig
+```html
 (% extends '@scentair/paragraphs/paragraph.html.twig' %)
 (% block content %)
   <div class="card">
@@ -104,7 +104,7 @@
 ### AAU EDU (Accordion)
 * templates/paragraphs/paragraph--block-accordion-item.html.twig
 
-```twig
+```html
 (( attach_library('aau/paragraph-block-accordion') ))
 ...
 <div(( attributes.addClass(classes) ))>
@@ -119,7 +119,7 @@
 
 * templates/paragraphs/paragraph--accordion-item.html.twig
 
-```twig
+```html
 (( attach_library('aau/paragraph-accordion') ))
 ...
 <div(( attributes.addClass(classes) ))>
@@ -134,7 +134,7 @@
 ### Security First (Accordion)
 * templates/paragraphs/paragraph--accordion.html.twig
 
-```twig
+```html
 <div(( attributes.addClass(classes) ))> 
   <div class="accordion_sub-title">
     (( content.field_subtitle ))
@@ -153,7 +153,7 @@
 
 * templates/paragraphs/paragraph--accordion-item.html.twig
 
-```twig
+```html
 <div(( attributes.addClass(classes) )) >
   <div class="accordion-item_sub-heading">
     (( content.field_sub_heading ))
@@ -180,7 +180,7 @@
 ### Field To Market (Accordion)
 * templates/paragraphs/paragraph--accordion.html.twig
 
-```twig
+```html
 <div(( attributes.addClass(classes) )) id="paragraph-(( paragraph.id() ))">
   <div class="accordion__container">
   (% block content %)
@@ -192,7 +192,7 @@
 
 * templates/paragraphs/paragraph--accordion-item.html.twig
 
-```twig
+```html
 (( attach_library('ftm/poly-details') ))
 (% block paragraph %)
   <details(( attributes.addClass(classes) )) id="paragraph-(( paragraph.id() ))">
@@ -225,7 +225,7 @@
 ### ABA (Bio)
 * templates/content/node--people-bio--full.html.twig
 
-```twig
+```html
 <article(( attributes.addClass(classes) ))>
   
   <div class="person-hero">
@@ -291,7 +291,7 @@
 ### Creative Forces (Bio)
 * templates/content/node--person.html.twig
 
-```twig
+```html
 <article(( attributes.addClass(classes) ))>
   <div(( content_attributes.addClass('node__content') ))>
     <div class="pageheader">
@@ -376,7 +376,7 @@
 ## USFS (Bio)
 * templates/node/node--person--compact.html.twig
 
-```twig
+```html
 (% set email = content.field_person_email|render|striptags|trim %)
 (% set image = content.field_person_image|render %)
 (% set name = label  %)
@@ -441,7 +441,7 @@
 ### Creative Forces (CTA)
 * templates/paragraphs/paragraph--type--internal-cta-section.html.twig
 
-```twig
+```html
 <div(( attributes.addClass(classes) ))>
   (% block content %)
     (( content.field_title.0 ))
@@ -454,7 +454,7 @@
 
 * templates/paragraphs/paragraph--internal-cta-section.html.twig
 
-```twig
+```html
 <div(( attributes.addClass(classes) ))>
   (% block content %)
     <div class="internalCTA--container">
@@ -476,7 +476,7 @@
 ### HFSA (CTA)
 * templates/paragraphs/paragraph--call-to-action.html.twig
 
-```twig
+```html
 (% if paragraph.field_background_image.target_id is not empty %)
   (% set background = paragraph.field_background_image.entity.field_media_image.entity.uri.value %)
   (% do attributes.setAttribute("style", "background-image: url('" ~ file_url(background) ~ "')") %)
@@ -501,7 +501,7 @@
 ### USFS (Image Text)
 * templates/paragraphs/paragraph--two-column-image-text.html.twig
 
-```twig
+```html
 (% set layout = content.field_2_column_image_text_layout[0]|render %)
 (% set image = content.field_2_column_image_text_image[0]|render %)
 (% set text = content.field_2_column_image_text_text[0]|render %)
@@ -542,7 +542,7 @@
 ### IBHRE (Image Text - referred to as 'Image & CTA')
 * templates/paragraphs/paragraph--image-and-cta--default.html.twig
 
-```twig
+```html
 (%
   set classes = [
     'paragraph',
@@ -572,7 +572,7 @@
 ### HFSA (Image Text)
 * templates/paragraphs/paragraph--image-text.html.twig
 
-```twig
+```html
 <div(( attributes.addClass(classes) ))>
   <div class="container paragraph-wrapper">
     (% block content %)
@@ -642,7 +642,7 @@
 ### ABA (Quote)
 * templates/paragraphs/paragraph--quote.html.twig
 
-```twig
+```html
 <div(( attributes.addClass(classes) ))>
     (% block content %)
       <div class="l-quote-container">
@@ -676,7 +676,7 @@
 ### Security First (Quote)
 * templates/paragraphs/paragraph--quote.html.twig
 
-```twig
+```html
 <div(( attributes.addClass(classes) )) >
   (% if content.field_quote_text|render|trim %)
     <div class="quote_text">
@@ -703,7 +703,7 @@
 ### IBHRE (Quote)
 * templates/paragraphs/paragraph--quote--default.html.twig
 
-```twig
+```html
 <div(( attributes.addClass(classes) ))>
   (% block content %)
     (( content|without('field_quote_subtitle', 'field_quote_subtitle_2') ))
