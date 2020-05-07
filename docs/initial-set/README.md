@@ -29,7 +29,7 @@
 
 ### Mimic (Accordion - included in HFSA, IBHRE, USFS, etc.)
 * templates/paragraphs/paragraph--accordion.html.twig
-```
+```twig
 <div{{ attributes.addClass(classes) }}>
   {% block content %}
 
@@ -55,7 +55,7 @@
 
 ### Scentair (Accordion)
 * templates/paragraphs/paragraph--faq-accordion--default.html.twig
-```
+```twig
 {% extends '@scentair/paragraphs/paragraph.html.twig' %}
 {% block content %}
   <section class="faq-accordion-section">
@@ -73,7 +73,7 @@
 ```
 
 * templates/paragraphs/paragraph--faq.html.twig
-```
+```twig
 {% extends '@scentair/paragraphs/paragraph.html.twig' %}
 {% block content %}
   <div class="card">
@@ -96,7 +96,7 @@
 
 ### AAU EDU (Accordion)
 * templates/paragraphs/paragraph--block-accordion-item.html.twig
-```
+```twig
 {{ attach_library('aau/paragraph-block-accordion') }}
 ...
 <div{{ attributes.addClass(classes) }}>
@@ -110,7 +110,7 @@
 ```
 
 * templates/paragraphs/paragraph--accordion-item.html.twig
-```
+```twig
 {{ attach_library('aau/paragraph-accordion') }}
 ...
 <div{{ attributes.addClass(classes) }}>
@@ -124,7 +124,7 @@
 
 ### Security First (Accordion)
 * templates/paragraphs/paragraph--accordion.html.twig
-```
+```twig
 <div{{ attributes.addClass(classes) }}> 
   <div class="accordion_sub-title">
     {{ content.field_subtitle }}
@@ -142,7 +142,7 @@
 ```
 
 * templates/paragraphs/paragraph--accordion-item.html.twig
-```
+```twig
 <div{{ attributes.addClass(classes) }} >
   <div class="accordion-item_sub-heading">
     {{ content.field_sub_heading }}
@@ -168,7 +168,7 @@
 
 ### Field To Market (Accordion)
 * templates/paragraphs/paragraph--accordion.html.twig
-```
+```twig
 <div{{ attributes.addClass(classes) }} id="paragraph-{{ paragraph.id() }}">
   <div class="accordion__container">
   {% block content %}
@@ -179,7 +179,7 @@
 ```
 
 * templates/paragraphs/paragraph--accordion-item.html.twig
-```
+```twig
 {{ attach_library('ftm/poly-details') }}
 {% block paragraph %}
   <details{{ attributes.addClass(classes) }} id="paragraph-{{ paragraph.id() }}">
@@ -211,7 +211,7 @@
 
 ### ABA (Bio)
 * templates/content/node--people-bio--full.html.twig
-```
+```twig
 <article{{ attributes.addClass(classes) }}>
   
   <div class="person-hero">
@@ -276,7 +276,7 @@
 
 ### Creative Forces (Bio)
 * templates/content/node--person.html.twig
-```
+```twig
 <article{{ attributes.addClass(classes) }}>
   <div{{ content_attributes.addClass('node__content') }}>
     <div class="pageheader">
@@ -360,7 +360,7 @@
 
 ## USFS (Bio)
 * templates/node/node--person--compact.html.twig
-```
+```twig
 {% set email = content.field_person_email|render|striptags|trim %}
 {% set image = content.field_person_image|render %}
 {% set name = label  %}
@@ -424,7 +424,7 @@
 
 ### Creative Forces (CTA)
 * templates/paragraphs/paragraph--type--internal-cta-section.html.twig
-```
+```twig
 <div{{ attributes.addClass(classes) }}>
   {% block content %}
     {{ content.field_title.0 }}
@@ -436,7 +436,7 @@
 ```
 
 * templates/paragraphs/paragraph--internal-cta-section.html.twig
-```
+```twig
 <div{{ attributes.addClass(classes) }}>
   {% block content %}
     <div class="internalCTA--container">
@@ -457,7 +457,7 @@
 
 ### HFSA (CTA)
 * templates/paragraphs/paragraph--call-to-action.html.twig
-```
+```twig
 {% if paragraph.field_background_image.target_id is not empty %}
   {% set background = paragraph.field_background_image.entity.field_media_image.entity.uri.value %}
   {% do attributes.setAttribute("style", "background-image: url('" ~ file_url(background) ~ "')") %}
@@ -481,7 +481,7 @@
 
 ### USFS (Image Text)
 * templates/paragraphs/paragraph--two-column-image-text.html.twig
-```
+```twig
 {% set layout = content.field_2_column_image_text_layout[0]|render %}
 {% set image = content.field_2_column_image_text_image[0]|render %}
 {% set text = content.field_2_column_image_text_text[0]|render %}
@@ -521,7 +521,7 @@
 
 ### IBHRE (Image Text - referred to as 'Image & CTA')
 * templates/paragraphs/paragraph--image-and-cta--default.html.twig
-```
+```twig
 {%
   set classes = [
     'paragraph',
@@ -550,7 +550,7 @@
 
 ### HFSA (Image Text)
 * templates/paragraphs/paragraph--image-text.html.twig
-```
+```twig
 <div{{ attributes.addClass(classes) }}>
   <div class="container paragraph-wrapper">
     {% block content %}
@@ -619,7 +619,7 @@
 
 ### ABA (Quote)
 * templates/paragraphs/paragraph--quote.html.twig
-```
+```twig
 <div{{ attributes.addClass(classes) }}>
     {% block content %}
       <div class="l-quote-container">
@@ -652,7 +652,7 @@
 
 ### Security First (Quote)
 * templates/paragraphs/paragraph--quote.html.twig
-```
+```twig
 <div{{ attributes.addClass(classes) }} >
   {% if content.field_quote_text|render|trim %}
     <div class="quote_text">
@@ -678,7 +678,7 @@
 
 ### IBHRE (Quote)
 * templates/paragraphs/paragraph--quote--default.html.twig
-```
+```twig
 <div{{ attributes.addClass(classes) }}>
   {% block content %}
     {{ content|without('field_quote_subtitle', 'field_quote_subtitle_2') }}
