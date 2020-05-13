@@ -1,0 +1,33 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.repeat_listing
+    - paragraphs.paragraphs_type.listing
+  module:
+    - viewsreference
+id: paragraph.listing.repeat_listing
+field_name: repeat_listing
+entity_type: paragraph
+bundle: listing
+label: Listing
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: 0
+  plugin_types:
+    block: block
+  preselect_views: { }
+  enabled_settings:
+    limit: limit
+    title: title
+    argument: 0
+    offset: 0
+    pager: 0
+field_type: viewsreference
