@@ -2,10 +2,10 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_question
+    - field.storage.paragraph.repeat_question
     - paragraphs.paragraphs_type.question_answer_pair
-id: paragraph.question_answer_pair.field_question
-field_name: field_question
+id: paragraph.question_answer_pair.repeat_question
+field_name: repeat_question
 entity_type: paragraph
 bundle: question_answer_pair
 label: Question

@@ -4,8 +4,8 @@ dependencies:
   module:
     - entity_reference_revisions
     - paragraphs
-id: paragraph.field_question_answer_pair
-field_name: field_question_answer_pair
+id: paragraph.repeat_question_answer_pair
+field_name: repeat_question_answer_pair
 entity_type: paragraph
 type: entity_reference_revisions
 settings:

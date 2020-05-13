@@ -2,10 +2,10 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.image_text.field_image
-    - field.field.paragraph.image_text.field_image_position
-    - field.field.paragraph.image_text.field_img_text_cta
-    - field.field.paragraph.image_text.field_rich_text
+    - field.field.paragraph.image_text.repeat_image
+    - field.field.paragraph.image_text.repeat_image_position
+    - field.field.paragraph.image_text.repeat_img_text_cta
+    - field.field.paragraph.image_text.repeat_rich_text
     - paragraphs.paragraphs_type.image_text
   module:
     - entity_browser_entity_form
@@ -17,7 +17,7 @@ targetEntityType: paragraph
 bundle: image_text
 mode: default
 content:
-  field_image:
+  repeat_image:
     weight: 0
     settings:
       form_mode: default
@@ -35,13 +35,13 @@ content:
         entity_browser_id: media_entity_browser_modal
     type: inline_entity_form_complex
     region: content
-  field_image_position:
+  repeat_image_position:
     weight: 3
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
-  field_img_text_cta:
+  repeat_img_text_cta:
     weight: 2
     settings:
       placeholder_url: ''
@@ -49,7 +49,7 @@ content:
     third_party_settings: {  }
     type: link_default
     region: content
-  field_rich_text:
+  repeat_rich_text:
     weight: 1
     settings:
       rows: 5

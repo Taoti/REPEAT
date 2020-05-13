@@ -4,8 +4,8 @@ dependencies:
   module:
     - paragraphs
     - text
-id: paragraph.field_rich_text
-field_name: field_rich_text
+id: paragraph.repeat_answer
+field_name: repeat_answer
 entity_type: paragraph
 type: text_long
 settings: {  }

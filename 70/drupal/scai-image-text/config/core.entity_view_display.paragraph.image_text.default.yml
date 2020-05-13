@@ -2,10 +2,10 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.image_text.field_image
-    - field.field.paragraph.image_text.field_image_position
-    - field.field.paragraph.image_text.field_img_text_cta
-    - field.field.paragraph.image_text.field_rich_text
+    - field.field.paragraph.image_text.repeat_image
+    - field.field.paragraph.image_text.repeat_image_position
+    - field.field.paragraph.image_text.repeat_img_text_cta
+    - field.field.paragraph.image_text.repeat_rich_text
     - image.style.image_home
     - paragraphs.paragraphs_type.image_text
   module:
@@ -17,7 +17,7 @@ targetEntityType: paragraph
 bundle: image_text
 mode: default
 content:
-  field_image:
+  repeat_image:
     type: media_thumbnail
     weight: 0
     label: hidden
@@ -26,7 +26,7 @@ content:
       image_link: ''
     third_party_settings: {  }
     region: content
-  field_img_text_cta:
+  repeat_img_text_cta:
     weight: 2
     label: hidden
     settings:
@@ -38,7 +38,7 @@ content:
     third_party_settings: {  }
     type: link
     region: content
-  field_rich_text:
+  repeat_rich_text:
     weight: 1
     label: hidden
     settings: {  }
@@ -46,5 +46,5 @@ content:
     type: text_default
     region: content
 hidden:
-  field_image_position: true
+  repeat_image_position: true
   search_api_excerpt: true

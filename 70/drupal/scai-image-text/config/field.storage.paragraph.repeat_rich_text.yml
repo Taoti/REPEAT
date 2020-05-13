@@ -2,14 +2,14 @@ langcode: en
 status: true
 dependencies:
   module:
-    - link
     - paragraphs
-id: paragraph.field_img_text_cta
-field_name: field_img_text_cta
+    - text
+id: paragraph.repeat_rich_text
+field_name: repeat_rich_text
 entity_type: paragraph
-type: link
+type: text_long
 settings: {  }
-module: link
+module: text
 locked: false
 cardinality: 1
 translatable: true

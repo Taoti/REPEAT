@@ -2,13 +2,13 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_question_answer_pair
+    - field.storage.paragraph.repeat_question_answer_pair
     - paragraphs.paragraphs_type.q_a
     - paragraphs.paragraphs_type.question_answer_pair
   module:
     - entity_reference_revisions
-id: paragraph.q_a.field_question_answer_pair
-field_name: field_question_answer_pair
+id: paragraph.q_a.repeat_question_answer_pair
+field_name: repeat_question_answer_pair
 entity_type: paragraph
 bundle: q_a
 label: 'Question & Answer Pair'

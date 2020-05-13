@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.q_a.field_question_answer_pair
+    - field.field.paragraph.q_a.repeat_question_answer_pair
     - paragraphs.paragraphs_type.q_a
   module:
     - paragraphs
@@ -11,7 +11,7 @@ targetEntityType: paragraph
 bundle: q_a
 mode: default
 content:
-  field_question_answer_pair:
+  repeat_question_answer_pair:
     type: entity_reference_paragraphs
     weight: 0
     settings:

@@ -4,8 +4,8 @@ dependencies:
   module:
     - options
     - paragraphs
-id: paragraph.field_image_position
-field_name: field_image_position
+id: paragraph.repeat_image_position
+field_name: repeat_image_position
 entity_type: paragraph
 type: list_string
 settings:
