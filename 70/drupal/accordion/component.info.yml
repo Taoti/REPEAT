@@ -1,0 +1,4 @@
+name: 'Accordion'
+description: 'An Accordion, with nested accordion items'
+post-install notes: ''
+dependencies:

@@ -9,6 +9,3 @@
 
 ## Docs
 * Docs contains other relevant reference material, such as documentation on using the REPEAT 70 library, project notes, etc.
-
-## Review
-* Review contains components from past projects or proposed for future ones, but which have not been formally included in the REPEAT 70 library.

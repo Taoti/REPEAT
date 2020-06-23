@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.repeat_text
+    - paragraphs.paragraphs_type.cta_section
+  module:
+    - text
+id: paragraph.cta_section.repeat_text
+field_name: repeat_text
+entity_type: paragraph
+bundle: cta_section
+label: Text
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
