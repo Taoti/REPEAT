@@ -1,0 +1,4 @@
+name: 'Demo - Question Answer Pair'
+description: 'Demo component taken from INEE'
+post-install notes: ''
+dependencies:

@@ -1,0 +1,4 @@
+name: 'Demo - Image Text'
+description: 'Demo component taken from SCAI'
+post-install notes: ''
+dependencies:

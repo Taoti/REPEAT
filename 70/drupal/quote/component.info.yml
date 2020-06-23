@@ -1,0 +1,4 @@
+name: 'Quote'
+description: 'A Featured Quote with the quote, the source, and person reference'
+post-install notes: ''
+dependencies:

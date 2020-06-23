@@ -1,0 +1,40 @@
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--' ~ paragraph.bundle|clean_class,
+    'paragraph--' ~ paragraph.bundle|clean_class ~ '--' ~ view_mode|clean_class,
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+{% block paragraph %}
+  <div{{ attributes.addClass(classes) }}>
+    {% block content %}
+      <div class="l-quote-container">
+        <div class="l-quote__content">
+          <div class="quote__icon">&#8220;</div>
+
+          <div class="quote__description">
+            {{ content.repeat_description|field_value }}
+          </div>
+
+          <div class="quote__byline">
+            <div class="quote__image">
+              {{ content.repeat_image|field_value }}
+            </div>
+            <div class="l-quote__byline-text">
+              <div class="quote__name-line">
+                <div class="quote__name">{{ content.repeat_title|field_value }}</div> | 
+                <div class="quote__position">{{ content.repeat_position|field_value }}</div>
+              </div>
+              <div class="quote__company-line">
+                {{ content.repeat_company_name|field_value }}, {{ content.repeat_member_since|field_value }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endblock %}
+  </div>
+{% endblock paragraph %}
