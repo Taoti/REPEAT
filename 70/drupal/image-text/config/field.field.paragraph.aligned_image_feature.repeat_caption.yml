@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.repeat_caption
+    - paragraphs.paragraphs_type.aligned_image_feature
+id: paragraph.aligned_image_feature.repeat_caption
+field_name: repeat_caption
+entity_type: paragraph
+bundle: aligned_image_feature
+label: Caption
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

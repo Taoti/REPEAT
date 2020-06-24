@@ -1,0 +1,17 @@
+
+# REPEAT: Carousel
+siema:
+  remote: https://pawelgrzybek.com/siema/assets/siema.min.js
+  version: "v1.5.1"
+  license:
+    url: https://github.com/pawelgrzybek/siema/blob/master/README.md
+    gpl-compatible: true
+  js:
+    js/vendor/siema.min.js: { minified: true }
+
+carousel:
+  js:
+    js/components/carousel.js: { minified: false }
+  dependencies:
+    - core/jquery.once
+    - theme/siema

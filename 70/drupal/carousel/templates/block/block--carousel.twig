@@ -1,0 +1,52 @@
+{% set slides = content.repeat_paragraph|field_value|field_value %}
+
+{%
+  set classes = [
+    'carousel',
+  ]
+%}
+
+<div{{ attributes.addClass(classes) }}>
+  {% block content %}
+    <div class="carousel__container">
+      {% if title %}
+        <h2 class="carousel__title">{{ content.repeat_title|field_value }}</h2>
+      {% endif %}
+
+      <div class="carousel__slides">
+        {% for slide in slides %}
+          <div class="carousel__slide">
+            {{ slide }}
+          </div>
+        {% endfor %}
+      </div>
+
+      {% if link %}
+        <div class="carousel__link">
+          {{ content.repeat_link|field_value }}
+        </div>
+      {% endif %}
+
+      <div class="carousel__controls">
+        <button class="carousel-control__previous trigger--show-previous-slide">
+          <span class="visually-hidden">show previous slide</span>
+          <svg width="1792" height="1792" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg" aria-labelledby="title">
+            <title id="title" lang="en">double backward-facing arrows</title>
+            <path d="M109 1651q-19 19-32 13t-13-32v-1472q0-26 13-32t32 13l710 710q9 9 13 19v-710q0-26 13-32t32 13l710 710q19 19 19 45t-19 45l-710 710q-19 19-32 13t-13-32v-710q-4 10-13 19z"/>
+          </svg>
+        </button>
+
+        <ul class="carousel-control__pagination"></ul>
+
+        <button class="carousel-control__next trigger--show-next-slide">
+          <span class="visually-hidden">show next slide</span>
+          <svg width="1792" height="1792" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg" aria-labelledby="title">
+            <title id="title" lang="en">double forward-facing arrows</title>
+            <path d="M109 1651q-19 19-32 13t-13-32v-1472q0-26 13-32t32 13l710 710q9 9 13 19v-710q0-26 13-32t32 13l710 710q19 19 19 45t-19 45l-710 710q-19 19-32 13t-13-32v-710q-4 10-13 19z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  {% endblock %}
+</div>
+{{ attach_library('theme/carousel') }}

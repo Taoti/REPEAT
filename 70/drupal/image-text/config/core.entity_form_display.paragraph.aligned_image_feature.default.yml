@@ -1,0 +1,81 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.aligned_image_feature.repeat_caption
+    - field.field.paragraph.aligned_image_feature.repeat_cta
+    - field.field.paragraph.aligned_image_feature.repeat_description
+    - field.field.paragraph.aligned_image_feature.repeat_image
+    - field.field.paragraph.aligned_image_feature.repeat_orientation
+    - field.field.paragraph.aligned_image_feature.repeat_title
+    - paragraphs.paragraphs_type.aligned_image_feature
+  module:
+    - entity_browser_entity_form
+    - inline_entity_form
+    - link
+    - text
+id: paragraph.aligned_image_feature.default
+targetEntityType: paragraph
+bundle: aligned_image_feature
+mode: default
+content:
+  repeat_caption:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  repeat_cta:
+    weight: 2
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  repeat_description:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  repeat_image:
+    type: inline_entity_form_complex
+    weight: 3
+    settings:
+      form_mode: default
+      override_labels: true
+      label_singular: Image
+      label_plural: Images
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      revision: false
+      collapsible: false
+      collapsed: false
+      allow_duplicate: false
+    third_party_settings:
+      entity_browser_entity_form:
+        entity_browser_id: media_entity_browser_modal
+    region: content
+  repeat_orientation:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  repeat_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

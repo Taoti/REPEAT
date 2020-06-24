@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.repeat_description
+    - paragraphs.paragraphs_type.aligned_image_feature
+  module:
+    - text
+id: paragraph.aligned_image_feature.repeat_description
+field_name: repeat_description
+entity_type: paragraph
+bundle: aligned_image_feature
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

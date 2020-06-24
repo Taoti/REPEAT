@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.carousel
+    - field.storage.block_content.repeat_link
+  module:
+    - link
+id: block_content.carousel.repeat_link
+field_name: repeat_link
+entity_type: block_content
+bundle: carousel
+label: Link
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

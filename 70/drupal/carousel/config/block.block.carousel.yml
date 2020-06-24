@@ -1,0 +1,30 @@
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:carousel:e7279217-c627-47ed-bd7f-5ec94dc68fa1'
+  module:
+    - block_content
+    - system
+  theme:
+    - theme
+id: carousel
+theme: theme
+region: content
+weight: -2
+provider: null
+plugin: 'block_content:e7279217-c627-47ed-bd7f-5ec94dc68fa1'
+settings:
+  id: 'block_content:e7279217-c627-47ed-bd7f-5ec94dc68fa1'
+  label: 'Carousel'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

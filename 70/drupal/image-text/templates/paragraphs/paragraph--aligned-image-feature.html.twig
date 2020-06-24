@@ -1,0 +1,33 @@
+{% set orientation = content.repeat_orientation|field_value|render|trim|lower %}
+
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--' ~ paragraph.bundle|clean_class,
+    'paragraph--' ~ paragraph.bundle|clean_class ~ '--' ~ view_mode|clean_class,
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished',
+    'l-orientation--' ~ orientation
+  ]
+%}
+
+{% block paragraph %}
+  <div{{ attributes.addClass(classes) }}>
+    {% block content %}
+			<div class="l-aligned-image-feature__text">
+				<h3 class="aligned-image-feature__heading">{{ content.repeat_title|field_value }}</h4>
+				<div class="aligned-image-feature__description">{{ content.repeat_description|field_value }}</div>
+				<div class="aligned-image-feature__link">{{ content.repeat_cta|field_value }}</div>
+			</div>
+
+			<div class="l-aligned-image-feature__image">
+				{{ content.repeat_image|field_value }}
+
+				<div class="aligned-image-feature__caption">
+          {{ content.repeat_caption|field_value }}
+        </div>
+			</div>
+    {% endblock %}
+  </div>
+{% endblock paragraph %}

@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.repeat_title
+    - paragraphs.paragraphs_type.aligned_image_feature
+id: paragraph.aligned_image_feature.repeat_title
+field_name: repeat_title
+entity_type: paragraph
+bundle: aligned_image_feature
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
