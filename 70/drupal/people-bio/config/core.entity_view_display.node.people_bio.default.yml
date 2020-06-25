@@ -1,0 +1,44 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.people_bio.repeat_background_image
+    - field.field.node.people_bio.repeat_content
+    - field.field.node.people_bio.repeat_department
+    - field.field.node.people_bio.repeat_email
+    - field.field.node.people_bio.repeat_facebook
+    - field.field.node.people_bio.repeat_headline_description
+    - field.field.node.people_bio.repeat_hero_image
+    - field.field.node.people_bio.repeat_instagram
+    - field.field.node.people_bio.repeat_latest_news
+    - field.field.node.people_bio.repeat_linkedin
+    - field.field.node.people_bio.repeat_members_only
+    - field.field.node.people_bio.repeat_occupation
+    - field.field.node.people_bio.repeat_person_type
+    - field.field.node.people_bio.repeat_phone
+    - field.field.node.people_bio.repeat_twitter
+    - node.type.people_bio
+  module:
+    - user
+id: node.people_bio.default
+targetEntityType: node
+bundle: people_bio
+mode: default
+content: {  }
+hidden:
+  repeat_background_image: true
+  repeat_content: true
+  repeat_department: true
+  repeat_email: true
+  repeat_facebook: true
+  repeat_headline_description: true
+  repeat_hero_image: true
+  repeat_instagram: true
+  repeat_latest_news: true
+  repeat_linkedin: true
+  repeat_members_only: true
+  repeat_occupation: true
+  repeat_person_type: true
+  repeat_phone: true
+  repeat_twitter: true
+  links: true

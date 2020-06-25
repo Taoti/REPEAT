@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.repeat_linkedin
+    - node.type.people_bio
+  module:
+    - link
+id: node.people_bio.repeat_linkedin
+field_name: repeat_linkedin
+entity_type: node
+bundle: people_bio
+label: LinkedIn
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 0
+field_type: link

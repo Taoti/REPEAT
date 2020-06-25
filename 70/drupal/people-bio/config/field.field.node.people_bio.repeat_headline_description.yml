@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.repeat_headline_description
+    - node.type.people_bio
+id: node.people_bio.repeat_headline_description
+field_name: repeat_headline_description
+entity_type: node
+bundle: people_bio
+label: Bio
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

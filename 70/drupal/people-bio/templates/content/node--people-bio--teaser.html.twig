@@ -1,0 +1,23 @@
+{%
+  set classes = [
+    'node',
+    'node--' ~ node.bundle|clean_class,
+    'node--' ~ node.bundle|clean_class ~ '--' ~ view_mode|clean_class,
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  ]
+%}
+<article{{ attributes.addClass(classes) }}>
+  <a class="person__link" href="{{ url }}">
+    <div class="person__image">
+      {{ content.repeat_hero_image|field_value }}
+    </div>
+    <h2 class="person__heading">{{ label|field_value }}</h2>
+  </a>
+  <div class="person__occupation">
+    {{ content.repeat_occupation|field_value }}
+  </div>
+</article>

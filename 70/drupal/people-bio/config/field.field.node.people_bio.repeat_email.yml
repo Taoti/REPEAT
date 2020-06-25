@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.repeat_email
+    - node.type.people_bio
+id: node.people_bio.repeat_email
+field_name: repeat_email
+entity_type: node
+bundle: people_bio
+label: Email
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

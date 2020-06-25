@@ -1,0 +1,33 @@
+{%
+  set classes = [
+    'node',
+    'node--' ~ node.bundle|clean_class,
+    'node--' ~ node.bundle|clean_class ~ '--' ~ view_mode|clean_class,
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  ]
+%}
+
+{% set emailStr = content.repeat_email|field_value|render|trim %}
+{% set phoneStr = content.repeat_phone|field_value|render|trim %}
+
+<article{{ attributes.addClass(classes) }}>
+  <h4 class="person__name">{{ label|field_value }}</h4>
+
+  {% if phoneStr is not empty %}
+    <div class="person__phone">
+      | <div class="person__label">Phone:</div> 
+      <a href="tel:{{ phoneStr }}">{{ phoneStr }}</a>
+    </div>
+  {% endif %}
+
+  {% if emailStr is not empty %}
+    <div class="person__email">
+      | <div class="person__label">Email:</div> 
+      <a href="mailto:{{ emailStr }}">{{ emailStr }}</a>
+    </div>
+  {% endif %}
+</article>

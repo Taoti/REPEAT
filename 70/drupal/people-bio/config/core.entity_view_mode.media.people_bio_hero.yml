@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.people_bio_hero
+label: 'People Bio Hero'
+targetEntityType: media
+cache: true

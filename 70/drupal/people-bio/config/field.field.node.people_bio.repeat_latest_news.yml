@@ -1,0 +1,30 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.repeat_latest_news
+    - node.type.people_bio
+    - paragraphs.paragraphs_type.latest_news
+  module:
+    - entity_reference_revisions
+id: node.people_bio.repeat_latest_news
+field_name: repeat_latest_news
+entity_type: node
+bundle: people_bio
+label: 'Latest News'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      latest_news: latest_news
+    target_bundles_drag_drop:
+      latest_news:
+        enabled: true
+        weight: 1
+field_type: entity_reference_revisions

@@ -1,0 +1,142 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.people_bio.repeat_background_image
+    - field.field.node.people_bio.repeat_content
+    - field.field.node.people_bio.repeat_department
+    - field.field.node.people_bio.repeat_email
+    - field.field.node.people_bio.repeat_facebook
+    - field.field.node.people_bio.repeat_headline_description
+    - field.field.node.people_bio.repeat_hero_image
+    - field.field.node.people_bio.repeat_instagram
+    - field.field.node.people_bio.repeat_latest_news
+    - field.field.node.people_bio.repeat_linkedin
+    - field.field.node.people_bio.repeat_members_only
+    - field.field.node.people_bio.repeat_occupation
+    - field.field.node.people_bio.repeat_person_type
+    - field.field.node.people_bio.repeat_phone
+    - field.field.node.people_bio.repeat_twitter
+    - node.type.people_bio
+  module:
+    - entity_reference_revisions
+    - link
+    - user
+id: node.people_bio.full
+targetEntityType: node
+bundle: people_bio
+mode: full
+content:
+  repeat_background_image:
+    weight: 9
+    label: hidden
+    settings:
+      view_mode: grayscaling
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  repeat_content:
+    weight: 10
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  repeat_email:
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  repeat_facebook:
+    weight: 5
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    type: link
+    region: content
+  repeat_headline_description:
+    type: basic_string
+    weight: 2
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  repeat_hero_image:
+    type: entity_reference_entity_view
+    weight: 3
+    region: content
+    label: hidden
+    settings:
+      view_mode: photo
+      link: false
+    third_party_settings: {  }
+  repeat_instagram:
+    type: link
+    weight: 7
+    region: content
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+  repeat_latest_news:
+    type: entity_reference_revisions_entity_view
+    weight: 11
+    region: content
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+  repeat_linkedin:
+    type: link
+    weight: 8
+    region: content
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+  repeat_occupation:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  repeat_twitter:
+    weight: 6
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden:
+  repeat_department: true
+  repeat_members_only: true
+  repeat_person_type: true
+  repeat_phone: true
+  links: true

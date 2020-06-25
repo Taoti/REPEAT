@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.repeat_wysiwyg
+    - paragraphs.paragraphs_type.content_embed
+  module:
+    - text
+id: paragraph.content_embed.repeat_wysiwyg
+field_name: repeat_wysiwyg
+entity_type: paragraph
+bundle: content_embed
+label: WYSIWYG
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

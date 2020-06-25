@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.repeat_facebook
+    - node.type.people_bio
+  module:
+    - link
+id: node.people_bio.repeat_facebook
+field_name: repeat_facebook
+entity_type: node
+bundle: people_bio
+label: Facebook
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 0
+field_type: link

@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.repeat_section_name
+    - paragraphs.paragraphs_type.latest_news
+id: paragraph.latest_news.repeat_section_name
+field_name: repeat_section_name
+entity_type: paragraph
+bundle: latest_news
+label: 'Section name'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

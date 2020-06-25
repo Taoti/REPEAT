@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+id: latest_news
+label: 'Latest News'
+icon_uuid: null
+icon_default: null
+description: 'The Latest News block with custom Title and max 3 Articles references'
+behavior_plugins: {  }

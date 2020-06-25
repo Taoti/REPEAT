@@ -1,0 +1,74 @@
+{%
+  set classes = [
+    'node',
+    'node--' ~ node.bundle|clean_class,
+    'node--' ~ node.bundle|clean_class ~ '--' ~ view_mode|clean_class,
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  ]
+%}
+
+<article{{ attributes.addClass(classes) }}>
+  
+  <div class="person-hero">
+    <div class="l-person-hero__columns">
+      <div class="l-person-hero__text">
+        <div class="l-person-hero__text-constrain">
+
+          {# <div class="person__breadcrumb">{{ drupal_entity('block', 'breadcrumbs') }}</div> #}
+
+          <div class="l-person-hero__text-middle">
+            <h1 class="person__title">{{ label|repeat_value }}</h1>
+            <div class="person__occupation">{{ content.repeat_occupation|field_value }}</div>
+            <div class="person__bio">{{ content.repeat_headline_description|field_value }}</div>
+          </div>
+          
+          <div class="l-person-hero__text-bottom">
+            {% if 
+              content.repeat_email|render is not empty or
+              content.repeat_facebook|render is not empty or
+              content.repeat_instagram|render is not empty or 
+              content.repeat_linkedin|render is not empty or 
+              content.repeat_twitter|render is not empty 
+            %}
+              <div class="person__social">
+                <div class="person__social-label">
+                  Contact Me:
+                </div> 
+                <ul class="social-list">
+                  {% if content.repeat_email|render is not empty  %}<li class="social-list__item social-list__item--email">{{ content.repeat_email }}</li>{% endif %}
+                  {% if content.repeat_facebook|render is not empty  %}<li class="social-list__item social-list__item--facebook">{{ content.repeat_facebook }}</li>{% endif %}
+                  {% if content.repeat_twitter|render is not empty %}<li class="social-list__item social-list__item--twitter">{{ content.repeat_twitter }}</li>{% endif %}
+                  {% if content.repeat_instagram|render is not empty  %}<li class="social-list__item social-list__item--instagram">{{ content.repeat_instagram }}</li>{% endif %}
+                  {% if content.repeat_linkedin|render is not empty  %}<li class="social-list__item social-list__item--linkedin">{{ content.repeat_linkedin }}</li>{% endif %}
+                </ul>
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+
+      {% set bg_image_url = content.repeat_background_image|field_value|render|striptags|trim %}
+
+      <div class="l-person-hero__image" style="background-image: url('{{ bg_image_url }}')">
+        <div class="l-person-hero__image-constrain">
+          {{ content.repeat_hero_image|field_value }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="person-content l-content-constrain l-paragraph-container">
+    {{ content.repeat_content|field_value }}
+  </div>
+
+  <section class="post-content">
+    <div class="post-content__latest-news">
+      {{ content.repeat_latest_news|field_value }} 
+    </div>
+  </section>
+
+</article>

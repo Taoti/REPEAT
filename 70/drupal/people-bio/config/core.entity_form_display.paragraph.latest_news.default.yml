@@ -1,0 +1,47 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.latest_news.repeat_articles
+    - field.field.paragraph.latest_news.repeat_section_name
+    - field.field.paragraph.latest_news.repeat_title
+    - paragraphs.paragraphs_type.latest_news
+  module:
+    - entity_browser_entity_form
+    - inline_entity_form
+id: paragraph.latest_news.default
+targetEntityType: paragraph
+bundle: latest_news
+mode: default
+content:
+  repeat_articles:
+    weight: 1
+    settings:
+      form_mode: default
+      override_labels: true
+      label_singular: Article
+      label_plural: Articles
+      allow_existing: true
+      match_operator: CONTAINS
+      revision: false
+      collapsible: false
+      collapsed: false
+      allow_new: false
+      allow_duplicate: false
+    third_party_settings:
+      entity_browser_entity_form:
+        entity_browser_id: _none
+    type: inline_entity_form_complex
+    region: content
+  repeat_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  repeat_section_name: true
+  status: true

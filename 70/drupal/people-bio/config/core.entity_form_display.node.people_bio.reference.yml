@@ -1,0 +1,70 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.node.reference
+    - field.field.node.people_bio.repeat_background_image
+    - field.field.node.people_bio.repeat_content
+    - field.field.node.people_bio.repeat_department
+    - field.field.node.people_bio.repeat_email
+    - field.field.node.people_bio.repeat_facebook
+    - field.field.node.people_bio.repeat_headline_description
+    - field.field.node.people_bio.repeat_hero_image
+    - field.field.node.people_bio.repeat_instagram
+    - field.field.node.people_bio.repeat_latest_news
+    - field.field.node.people_bio.repeat_linkedin
+    - field.field.node.people_bio.repeat_members_only
+    - field.field.node.people_bio.repeat_occupation
+    - field.field.node.people_bio.repeat_person_type
+    - field.field.node.people_bio.repeat_phone
+    - field.field.node.people_bio.repeat_twitter
+    - node.type.people_bio
+id: node.people_bio.reference
+targetEntityType: node
+bundle: people_bio
+mode: reference
+content:
+  repeat_email:
+    type: email_default
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  repeat_phone:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  repeat_background_image: true
+  repeat_content: true
+  repeat_department: true
+  repeat_facebook: true
+  repeat_headline_description: true
+  repeat_hero_image: true
+  repeat_instagram: true
+  repeat_latest_news: true
+  repeat_linkedin: true
+  repeat_members_only: true
+  repeat_occupation: true
+  repeat_person_type: true
+  repeat_twitter: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true
