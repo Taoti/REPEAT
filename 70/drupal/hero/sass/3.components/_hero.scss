@@ -1,0 +1,30 @@
+//_____________________________________________
+//
+// Hero
+//_____________________________________________
+
+.hero__background {
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  margin-top: -42px;
+  margin-bottom: 3em;
+  min-height: 250px;
+}
+
+.hero__title {
+  align-self: flex-end;
+  background: linear-gradient(90deg, rgba(0, 43, 73, 1) 0%, rgba(0, 43, 73, 0.95) 50%, rgba(0, 43, 73, 0.7) 100%);
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  height: 200px;
+  width: 400px;
+  border-radius: 400px 400px 0 0;
+
+  h1 {
+    color: #fff;
+    font-size: 1.7em;
+    padding: 3.5em 2em 0;
+  }
+}

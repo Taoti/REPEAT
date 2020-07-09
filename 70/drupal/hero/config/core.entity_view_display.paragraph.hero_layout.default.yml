@@ -1,0 +1,36 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.hero_layout.repeat_hero_image
+    - field.field.paragraph.hero_layout.repeat_hero_title
+    - paragraphs.paragraphs_type.hero_layout
+  module:
+    - svg_image
+id: paragraph.hero_layout.default
+targetEntityType: paragraph
+bundle: hero_layout
+mode: default
+content:
+  repeat_hero_image:
+    weight: 1
+    label: hidden
+    settings:
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  repeat_hero_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }
