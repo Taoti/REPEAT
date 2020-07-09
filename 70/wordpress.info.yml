@@ -1,4 +1,4 @@
-name: 'Listing'
-description: 'A Listing paragraph, which displays a view'
-post-install notes: ''
-dependencies:
+example:
+  modules:
+    - a
+    - b
