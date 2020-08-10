@@ -2,3 +2,10 @@ name: 'Listing'
 description: 'A Listing paragraph, which displays a view'
 post-install notes: ''
 dependencies:
+  components:
+  composer:
+    drupal/paragraphs: ^1.11
+    drupal/viewsreference: ^2.0
+  extensions:
+    - paragraphs
+    - viewsreference

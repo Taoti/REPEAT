@@ -2,3 +2,8 @@ name: 'Demo - Impact Statistics'
 description: 'Demo component taken from Creative Forces'
 post-install notes: ''
 dependencies:
+  components:
+  composer:
+    drupal/paragraphs: ^1.11
+  extensions:
+    - paragraphs

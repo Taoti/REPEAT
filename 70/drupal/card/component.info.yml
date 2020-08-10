@@ -2,3 +2,8 @@ name: 'Card'
 description: ''
 post-install notes: ''
 dependencies:
+  components:
+  composer:
+    drupal/paragraphs: ^1.11
+  extensions:
+    - paragraphs

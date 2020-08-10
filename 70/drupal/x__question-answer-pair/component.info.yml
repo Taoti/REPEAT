@@ -2,3 +2,8 @@ name: 'Demo - Question Answer Pair'
 description: 'Demo component taken from INEE'
 post-install notes: ''
 dependencies:
+  components:
+  composer:
+    drupal/paragraphs: ^1.11
+  extensions:
+    - paragraphs

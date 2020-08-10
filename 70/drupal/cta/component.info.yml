@@ -2,3 +2,8 @@ name: 'CTA'
 description: 'A Call To Action, simple and full width'
 post-install notes: ''
 dependencies:
+  components:
+  composer:
+    drupal/paragraphs: ^1.11
+  extensions:
+    - paragraphs

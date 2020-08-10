@@ -2,3 +2,8 @@ name: 'Accordion'
 description: 'An Accordion, with nested accordion items'
 post-install notes: ''
 dependencies:
+  components:
+  composer:
+    drupal/paragraphs: ^1.11
+  extensions:
+    - paragraphs

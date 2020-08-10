@@ -2,3 +2,8 @@ name: 'Image Text'
 description: 'An Image Text pattern, with an orientation field for left, right, or alternating image alignment'
 post-install notes: ''
 dependencies:
+  components:
+  composer:
+    drupal/paragraphs: ^1.11
+  extensions:
+    - paragraphs
