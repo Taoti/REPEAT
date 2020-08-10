@@ -1,11 +1,7 @@
 # REPEAT
-- **R**epo **E**xemplifying **P**atterned **E**xperiences **A**cross **T**aoti
+* **R**epo **E**xemplifying **P**atterned **E**xperiences **A**cross **T**aoti
+* Contains our shared component library, representing 70% of common components shared across projects, matching XD files from the Creative Services team as closely as possible
 
-## 70
-* 70 contains our shared component library, representing 70% of common components shared across projects.
-
-## START
-* START contains a reference library of static HTML, CSS, and JS files, matching XD files from the Creative Services team as closely as possible.
-
-## Docs
-* Docs contains other relevant reference material, such as documentation on using the REPEAT 70 library, project notes, etc.
+## Demo Links
+* [REPEAT Demo Drupal](https://test-repeat-drupal.pantheonsite.io)
+* [REPEAT Demo WordPress](https://test-repeat-wordpress.pantheonsite.io)
