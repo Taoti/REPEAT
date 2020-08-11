@@ -1,19 +1,18 @@
-//_____________________________________________
-//
+// ---
 // Card
-//_____________________________________________
+// ---
 
 .paragraph--type--card-layout {
   background: #fff;
   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.16);
   padding-bottom: 0.75em;
 
-  @media only screen and (min-width: $bp-layout-builder) {
+  @media only screen and (min-width: $width--m) {
     height: 100%;
   }
 
   .field--name-field-card-tag {
-    background: $blue-secondary;
+    background: $blue;
     border-radius: 0 0 100% 0;
     color: #fff;
     max-width: 110px;
@@ -25,12 +24,6 @@
   .field--name-field-card-image {
     height: 300px;
     overflow: hidden;
-
-    @media only screen and (min-width: $bp-layout-builder) {
-    }
-
-    @media only screen and (min-width: 750px) {
-    }
   }
 
   .field--name-field-card-title,
@@ -42,7 +35,7 @@
   }
 
   .field--name-field-card-title {
-    color: $gray-heading;
+    color: $gray;
     font-size: 1.2em;
     font-weight: bold;
     line-height: 1.2;
@@ -56,7 +49,7 @@
 
   .field--name-field-card-cta {
     a {
-      background: $blue-secondary;
+      background: $blue;
       color: #fff;
       display: inline-block;
       margin-bottom: 1em;
@@ -68,7 +61,7 @@
 
     a:hover,
     a:focus {
-      background: $blue-primary;
+      background: $blue;
     }
   }
 
@@ -100,78 +93,11 @@
   height: 600px;
   margin-bottom: -375px;
 
-  @media only screen and (min-width: $bp-layout-builder) {
+  @media only screen and (min-width: $width--m) {
     background-size: contain;
   }
-}
 
-.node--type-home-page {
-  .card__image-background {
-    @media only screen and (min-width: 950px) {
-      background-size: cover;
-    }
-  }
-}
-
-.node--type-landing-page {
-  .card__image-background {
-    @media only screen and (min-width: $bp-mobile-menu) {
-      background-size: cover;
-    }
-  }
-}
-
-.card__image-position--,
-.card__image-position--center {
-  .field--name-field-card-image {
-    img {
-      clip-path: circle(120px at center 80px);
-    }
-  }
-}
-
-.card__image-position--left {
-  .field--name-field-card-image {
-    img {
-      clip-path: circle(120px at 40% 80px);
-    }
-  }
-}
-
-.card__image-position--right {
-  .field--name-field-card-image {
-    img {
-      clip-path: circle(120px at 66% 80px);
-    }
-  }
-}
-
-.block-field-blocknodehome-pagefield-layout-builder {
-  @media only screen and (min-width: $bp-layout-builder) {
-    width: 104%;
-  }
-
-  @media only screen and (min-width: 768px) {
-    width: 103%;
-  }
-
-  @media only screen and (min-width: $bp-mobile-menu) {
-    width: 100%;
-  }
-
-  .paragraph--type--erl-section:last-child {
-    .layout--fourcol-section > .layout__region {
-      @media only screen and (min-width: $bp-layout-builder) {
-        flex: 0 1 21%;
-      }
-
-      @media only screen and (min-width: 768px) {
-        flex: 0 1 23%;
-      }
-
-      @media only screen and (min-width: 1000px) {
-        flex: 0 1 25%;
-      }
-    }
+  @media only screen and (min-width: $width--l) {
+    background-size: cover;
   }
 }

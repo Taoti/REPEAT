@@ -5,19 +5,17 @@
     padding: 1rem;
   }
 
-
   .l-quote-container {
     position: relative;
     padding: 3rem 4rem;
-    background-color: $color--navy-muted;
-    color: $color--white;
+    background-color: $blue;
+    color: $white;
     overflow: hidden;
 
     @media (max-width: 800px) {
       padding: 2rem;
     }
   }
-
 
   .decor-quote-background-underlay {
     position: absolute;
@@ -27,7 +25,7 @@
     z-index: 0;
 
     > svg {
-      @include fluid-image-full();
+      // @include fluid-image-full();
     }
 
     @media (max-width: 800px) {
@@ -39,12 +37,10 @@
     }
   }
 
-
   .l-quote__content {
     position: relative;
     z-index: 1;
   }
-
 
   .quote__icon {
     font-size: 3.25rem;
@@ -52,13 +48,11 @@
     line-height: 0.8;
   }
 
-
   .quote__description {
     font-size: 1.25rem;
     line-height: 1.7;
     letter-spacing: 0.2px
   }
-
 
   .quote__byline {
     display: flex;
@@ -68,7 +62,6 @@
     margin-top: 3rem;
   }
 
-
   .quote__name-line {
     display: flex;
     flex-direction: row;
@@ -76,7 +69,6 @@
     flex-wrap: wrap;
     justify-content: flex-start;
   }
-
 
   .quote__name,
   .quote__position {
@@ -91,16 +83,14 @@
     margin-left: 0.5rem;
   }
 
-
   .quote__image {
     width: 55px;
     height: 55px;
 
     > img {
-      @include fluid-image-full();
+      // @include fluid-image-full();
     }
   }
-
 
   .l-quote__byline-text {
     flex-direction: column;
@@ -115,11 +105,9 @@
   }
 
   .quote__title-line {
-    @include smallcaps;
+    // @include smallcaps;
   }
 
-
   .quote__company-line {
-
   }
 }

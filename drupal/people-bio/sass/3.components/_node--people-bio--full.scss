@@ -7,12 +7,11 @@
     justify-content: flex-start;
     width: 100%;
 
-    @media (max-width: 700px) {
+    @media (max-width: $width--m) {
       flex-direction: column;
       align-items: flex-start;
       justify-content: flex-start;
     }
-
 
     .l-person-hero__text {
       display: flex;
@@ -24,14 +23,13 @@
       width: calc(50% + 6rem);
       max-width: calc(50% + 6rem);
 
-      @media (max-width: 700px) {
+      @media (max-width: $width--m) {
         align-items: flex-start;
         justify-content: flex-start;
         width: 100%;
         max-width: 100%;
       }  
     }
-
 
     .l-person-hero__text-constrain {
       display: flex;
@@ -45,12 +43,12 @@
       width: 100%;
       max-width: calc(527px + 6rem);
 
-      @media (max-width: 950px) {
+      @media (max-width: $width--1) {
         padding: 2rem;
         padding-right: 4rem;
       }
   
-      @media (max-width: 700px) {
+      @media (max-width: $width--m) {
         justify-content: flex-start;
         width: 100%;
         max-width: 100%;
@@ -63,7 +61,6 @@
       }
     }
 
-
     .l-person-hero__image-constrain {
       position: relative;
       z-index: 1;
@@ -73,11 +70,11 @@
       padding-right: 2rem;
       max-width: calc(527px - 6rem);
 
-      @media (max-width: 950px) {
+      @media (max-width: $width--l) {
         padding: 2rem 0;
       }
 
-      @media (max-width: 700px) {
+      @media (max-width: $width--m) {
         height: inherit;
         padding: 2rem;
         width: 100%;
@@ -90,7 +87,6 @@
     }
   }
 
-
   .l-person-hero__image {
     position: relative;
     width: calc(50% - 6rem);
@@ -100,7 +96,7 @@
     margin: 0;
     background-size: cover;
     background-position: center right;
-    background-color: $color--navy;
+    background-color: $black;
     background-repeat: no-repeat;
 
     &:after {
@@ -112,22 +108,22 @@
       right: 0;
       bottom: 0;
       opacity: 0.9;
-      background-color: $color--navy;
+      background-color: $black;
     }
 
     img {
-      @include fluid-image-full();
+      // @include fluid-image-full();
       max-width: 425px;
       margin-left: -3rem;
     }
 
-    @media (max-width: 950px) {
+    @media (max-width: $width--l) {
       img {
         margin-left: -2rem;
       }
     }  
 
-    @media (max-width: 700px) {
+    @media (max-width: $width--m) {
       height: inherit;
       width: 100%;
       max-width: 100%;
@@ -139,32 +135,26 @@
     }
   }
 
-
   .person__breadcrumb {
     margin-bottom: 2rem;
   }
-
 
   .person__title {
     margin: 0;
   }
 
-
   .person__occupation,
   .person__social-label {
-    @include smallcaps();
+    // @include smallcaps();
   }
-
 
   .person__occupation {
-    color: $color--navy-muted;
+    color: $black;
   }
-
 
   .person__bio {
     margin: 1.5rem 0;
   }
-
 
   .person__social {
     display: flex;
@@ -173,9 +163,8 @@
     justify-content: flex-start;
   }
 
-
   .person__social-label {
-    color: $color--navy;
+    color: $black;
     margin-right: 0.5rem;
   }
 }

@@ -11,22 +11,22 @@
 //
 
 .l-page main.l-content .paragraph.paragraph--type--accordion {
-  @include container-reading;
+  // @include container-reading;
 
   > .field--name-field-title {
-    color: $color--blue2;
+    color: $blue;
     font-weight: bold;
     font-size: 1.25rem;
   }
 }
 
 .paragraph--type--accordion-item {
-  background-color: $color--gray-lt;
+  background-color: $gray;
   border-radius: 4px;
 
   &.accordion--collapsed {
     box-shadow: $box-shadow;
-    background-color: $color--white;
+    background-color: $white;
   }
 }
 
@@ -64,7 +64,7 @@
     .accordion__toggle-icon-horizontal,
     .accordion__toggle-icon-vertical {
       position: absolute;
-      background-color: $color--teal;
+      background-color: $blue;
       transition: background-color 0.2s linear;
     }
 
@@ -94,7 +94,7 @@
   &.accordion--collapsed .accordion__toggle {
     .accordion__toggle-icon-horizontal,
     .accordion__toggle-icon-vertical {
-      background-color: $color--blue2;
+      background-color: $blue;
     }
 
     .accordion__toggle-icon {
