@@ -1,0 +1,7 @@
+name: 'Pagination'
+description: 'Pagination include in parts directory'
+post-install notes: 'No associated module'
+dependencies:
+  components:
+  composer:
+  plugins:

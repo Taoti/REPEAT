@@ -1,0 +1,121 @@
+.l-module.table {
+    min-width: 700px;
+    max-width: $content-width;
+    padding: 0 3.6rem;
+
+    @media screen and (min-width: $tablet) {
+        padding: 0;
+
+    }
+
+    @media screen and (max-width: 767px) {
+        min-width: 0;
+    }
+}
+
+.table-inner {
+
+    .btn-container {
+        @media screen and (min-width: $tablet) {
+            display: flex;
+            width: 100%;
+            align-items: center;
+        }
+
+        a {
+            margin-left: 2rem;
+            margin-bottom: 1.5rem;
+
+        }
+
+        a:first-of-type {
+            margin-left: auto;
+        }
+    }
+
+    .table-main {
+        box-shadow: $boxshadow;
+    }
+
+}
+
+.table-table {
+    width: 100%;
+}
+
+.table-th {
+    font-weight: 700;
+    font-size: 2.2rem;
+    // font-family: $sans;
+    text-align: left;
+    padding: 1.8rem 1.7rem;
+    vertical-align: bottom;
+}
+
+.table-head .table-th {
+    border-bottom: 2px solid $text;
+    border-right: 2px solid $color-5;
+    background: $color-6;
+    font-size: 1.6rem;
+    font-family: $sans-serif;
+    font-weight: 600;
+    color: $invert;
+
+    &:first-of-type {
+        @media screen and (min-width: $tablet) {
+            width: 40%;
+
+        }
+    }
+
+    &:last-of-type {
+        border-right: none;
+    }
+}
+
+.table-td {
+    padding: 1rem 1.7rem;
+}
+
+.table-body {
+    tr {
+        border-bottom: 2px solid $color-10;
+
+        td {
+            background: $invert;
+            font-size: 1.6rem;
+            font-family: $roboto;
+            color: $color-6;
+            border-right: 2px solid $color-10;
+
+            &:last-of-type {
+                border-right: none;
+
+            }
+
+        }
+
+        &:last-of-type {
+            border-bottom: none;
+
+        }
+
+    }
+
+    tr:nth-child(odd) td {
+        background-color: $invert;
+    }
+
+    tr:nth-child(even) td {
+        background-color: $invert;
+    }
+
+}
+
+
+// OVERRIDES
+
+// When a table module follows a textBlock module, remove the top margin from the table. This is to ensure that the client can associate a piece of text with a table. This should override the margin provided by the .l-module class.
+.textBlock+.table {
+    margin-top: 0;
+}

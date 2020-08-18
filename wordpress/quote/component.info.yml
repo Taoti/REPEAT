@@ -1,0 +1,7 @@
+name: 'Quote'
+description: ''
+post-install notes: ''
+dependencies:
+  components:
+  composer:
+  plugins:

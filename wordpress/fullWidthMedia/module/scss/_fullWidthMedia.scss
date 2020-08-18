@@ -1,0 +1,54 @@
+.fullWidthMedia-inner {
+  @include l-container('content-2');
+  position: relative;
+}
+
+.videoContainer {
+  height: 0;
+  margin-bottom: .4rem;
+  padding-bottom: 56.25%; // 16:9
+  padding-top: 25px;
+  position: relative;
+
+  iframe {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
+
+.fullWidthMedia-imageContainer {
+  position: relative;
+
+  &::after {
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, transparentize($color-1, .1) 100%);
+    bottom: 0;
+    content: '';
+    height: 50%;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+  }
+}
+
+.fullWidthMedia-image {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.fullWidthMedia-caption {
+  border-left: 4rem solid $color-3;
+  bottom: 0;
+  color: $invert;
+  font-family: $sans-2;
+  left: 0;
+  padding: 2rem;
+  position: absolute;
+  text-transform: uppercase;
+  width: 100%;
+  z-index: 1;
+}

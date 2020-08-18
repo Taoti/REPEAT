@@ -1,0 +1,7 @@
+name: 'Text Block'
+description: ''
+post-install notes: ''
+dependencies:
+  components:
+  composer:
+  plugins:

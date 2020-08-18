@@ -1,0 +1,25 @@
+{% block fullWidthMedia %}
+{% if image_html or video_embed %}
+<div class="{{ classes }}">
+    <div class="fullWidthMedia-inner">
+
+        {% if image_html %}
+        <div class="fullWidthMedia-imageContainer">
+		    {{ image_html }}
+
+            {% if caption %}
+            <div class="fullWidthMedia-caption">{{ caption }}</div>
+            {% endif %}
+        </div>
+
+        {% elseif video_embed %}
+        <div class="videoContainer">
+          {{ video_embed }}
+        </div>
+
+		{% endif %}
+
+    </div>
+</div>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,7 @@
+name: 'Full Width Media'
+description: 'Full Width Media block, supports image or video'
+post-install notes: ''
+dependencies:
+  components:
+  composer:
+  plugins:

@@ -1,0 +1,7 @@
+name: 'Text Image'
+description: 'Text and Image block, includes image orientation'
+post-install notes: ''
+dependencies:
+  components:
+  composer:
+  plugins:

@@ -115,7 +115,45 @@ drupal:
       - field.field.paragraph.quote.repeat_position
       - field.field.paragraph.quote.repeat_title
 wordpress:
-  example:
-    modules:
-      - a
-      - b
+  accordion:
+    fields:
+      - primary_heading
+      - accordion_items
+  cta:
+    fields:
+      - heading
+      - description
+      - button_label
+      - button_url
+      - background_image
+      - overlay_color
+  fullWidthMedia:
+    fields:
+      - image_or_video
+      - image_array
+      - video_embed
+      - caption
+  pagination:
+    fields:
+  quote:
+    fields:
+      - primary_heading
+      - content
+  table:
+    fields:
+      - primary_heading
+      - buttons
+      - table_annotation
+      - table
+  textBlock:
+    fields:
+      - primary_heading
+      - content
+  textImage:
+    fields:
+      - image_orientation
+      - image
+      - primary_heading
+      - description
+      - button_label
+      - button_url
