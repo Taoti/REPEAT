@@ -1,4 +1,4 @@
-# Accordion
+# Pagination
 ## Usage
 Add to template part as needed
 
