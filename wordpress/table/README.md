@@ -3,4 +3,4 @@
 Add module as needed
 
 ## Demo
-[REPEAT Demo WordPress | Table](https://test-repeat-wordpress.pantheonsite.io/table)
+[REPEAT Example WordPress | Table](https://test-repeat-example-wordpress.pantheonsite.io/table)

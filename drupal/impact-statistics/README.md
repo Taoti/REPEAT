@@ -3,4 +3,4 @@
 Add to desired content type
 
 ## Demo
-[REPEAT Demo Drupal | Impact Statistics](https://test-repeat-drupal.pantheonsite.io/impact-statistics)
+[REPEAT Example Drupal | Impact Statistics](https://test-repeat-example-drupal.pantheonsite.io/impact-statistics)

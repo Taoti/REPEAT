@@ -3,4 +3,4 @@
 Add to desired content type
 
 ## Demo
-[REPEAT Demo Drupal | Accordion](https://test-repeat-drupal.pantheonsite.io/accordion)
+[REPEAT Example Drupal | Accordion](https://test-repeat-example-drupal.pantheonsite.io/accordion)

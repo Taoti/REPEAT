@@ -3,4 +3,4 @@
 Add to desired content type
 
 ## Demo
-[REPEAT Demo Drupal | Quote](https://test-repeat-drupal.pantheonsite.io/quote)
+[REPEAT Example Drupal | Quote](https://test-repeat-example-drupal.pantheonsite.io/quote)
