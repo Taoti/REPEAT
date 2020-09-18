@@ -15,19 +15,19 @@
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
-			<div class="l-aligned-image-feature__text">
-				<h3 class="aligned-image-feature__heading">{{ content.repeat_title|field_value }}</h4>
-				<div class="aligned-image-feature__description">{{ content.repeat_description|field_value }}</div>
-				<div class="aligned-image-feature__link">{{ content.repeat_cta|field_value }}</div>
-			</div>
+      <div class="l-aligned-image-feature__text">
+        <h3 class="aligned-image-feature__heading">{{ content.repeat_title|field_value }}</h4>
+        <div class="aligned-image-feature__description">{{ content.repeat_description|field_value }}</div>
+        <div class="aligned-image-feature__link">{{ content.repeat_cta|field_value }}</div>
+      </div>
 
-			<div class="l-aligned-image-feature__image">
-				{{ content.repeat_image|field_value }}
+      <div class="l-aligned-image-feature__image">
+        {{ content.repeat_image|field_value }}
 
-				<div class="aligned-image-feature__caption">
+        <div class="aligned-image-feature__caption">
           {{ content.repeat_caption|field_value }}
         </div>
-			</div>
+      </div>
     {% endblock %}
   </div>
 {% endblock paragraph %}

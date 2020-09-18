@@ -3,13 +3,13 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.repeat_orientation
-    - paragraphs.paragraphs_type.aligned_image_feature
+    - paragraphs.paragraphs_type.image_text_feature
   module:
     - options
-id: paragraph.aligned_image_feature.repeat_orientation
+id: paragraph.image_text_feature.repeat_orientation
 field_name: repeat_orientation
 entity_type: paragraph
-bundle: aligned_image_feature
+bundle: image_text_feature
 label: 'Image Orientation'
 description: ''
 required: true

@@ -4,11 +4,11 @@ dependencies:
   config:
     - field.storage.paragraph.repeat_image
     - media.type.image
-    - paragraphs.paragraphs_type.aligned_image_feature
-id: paragraph.aligned_image_feature.repeat_image
+    - paragraphs.paragraphs_type.image_text_feature
+id: paragraph.image_text_feature.repeat_image
 field_name: repeat_image
 entity_type: paragraph
-bundle: aligned_image_feature
+bundle: image_text_feature
 label: Image
 description: 'Recommended image size: 510x340 pixels.'
 required: true

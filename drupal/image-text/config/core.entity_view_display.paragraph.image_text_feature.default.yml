@@ -2,20 +2,20 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.aligned_image_feature.repeat_caption
-    - field.field.paragraph.aligned_image_feature.repeat_cta
-    - field.field.paragraph.aligned_image_feature.repeat_description
-    - field.field.paragraph.aligned_image_feature.repeat_image
-    - field.field.paragraph.aligned_image_feature.repeat_orientation
-    - field.field.paragraph.aligned_image_feature.repeat_title
-    - paragraphs.paragraphs_type.aligned_image_feature
+    - field.field.paragraph.image_text_feature.repeat_caption
+    - field.field.paragraph.image_text_feature.repeat_cta
+    - field.field.paragraph.image_text_feature.repeat_description
+    - field.field.paragraph.image_text_feature.repeat_image
+    - field.field.paragraph.image_text_feature.repeat_orientation
+    - field.field.paragraph.image_text_feature.repeat_title
+    - paragraphs.paragraphs_type.image_text_feature
   module:
     - link
     - options
     - text
-id: paragraph.aligned_image_feature.default
+id: paragraph.image_text_feature.default
 targetEntityType: paragraph
-bundle: aligned_image_feature
+bundle: image_text_feature
 mode: default
 content:
   repeat_caption:
@@ -50,7 +50,7 @@ content:
     weight: 3
     label: hidden
     settings:
-      view_mode: aligned_image_feature
+      view_mode: image_text_feature
       link: false
     third_party_settings: {  }
     region: content

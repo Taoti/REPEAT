@@ -1,8 +1,8 @@
 langcode: en
 status: true
 dependencies: {  }
-id: aligned_image_feature
-label: 'Aligned Image Feature'
+id: image_text_feature
+label: 'Image Text Feature'
 icon_uuid: null
 icon_default: null
 description: 'A Featured Content includes a title, an image, a description and the orientation to the content regarding the image'

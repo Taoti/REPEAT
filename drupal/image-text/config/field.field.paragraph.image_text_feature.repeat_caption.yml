@@ -3,11 +3,11 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.repeat_caption
-    - paragraphs.paragraphs_type.aligned_image_feature
-id: paragraph.aligned_image_feature.repeat_caption
+    - paragraphs.paragraphs_type.image_text_feature
+id: paragraph.image_text_feature.repeat_caption
 field_name: repeat_caption
 entity_type: paragraph
-bundle: aligned_image_feature
+bundle: image_text_feature
 label: Caption
 description: ''
 required: false
