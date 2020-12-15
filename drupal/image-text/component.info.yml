@@ -4,6 +4,10 @@ post-install notes: ''
 dependencies:
   components:
   composer:
+    drupal/entity_browser: ^2.5
+    drupal/inline_entity_form: ^1.0@RC
     drupal/paragraphs: ^1.11
   extensions:
+    - entity_browser_entity_form
+    - inline_entity_form
     - paragraphs
