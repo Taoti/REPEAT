@@ -4,6 +4,8 @@ post-install notes: ''
 dependencies:
   components:
   composer:
-    drupal/paragraphs: ^1.11
+    drupal/paragraphs: ^1.12
+    drupal/svg_image: ^1.14
   extensions:
     - paragraphs
+    - svg_image

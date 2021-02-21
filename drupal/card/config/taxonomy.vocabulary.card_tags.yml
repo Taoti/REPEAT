@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Card Tags'
+vid: card_tags
+description: 'Associated with Card layout'
+weight: 0

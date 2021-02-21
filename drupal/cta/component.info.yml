@@ -4,6 +4,8 @@ post-install notes: ''
 dependencies:
   components:
   composer:
-    drupal/paragraphs: ^1.11
+    drupal/field_group: ^3.1
+    drupal/paragraphs: ^1.12
   extensions:
+    - field_group
     - paragraphs
