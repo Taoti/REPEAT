@@ -1,0 +1,7 @@
+name: 'Hero'
+description: 'Hero'
+post-install notes: ''
+dependencies:
+  components:
+  composer:
+  plugins:
