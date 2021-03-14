@@ -1,0 +1,28 @@
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+
+{% set cta_background = file_url(content.repeat_cta_image.0['#media'].field_media_image.entity.uri.value) %}
+
+{% block paragraph %}
+  <div{{ attributes.addClass(classes) }} {% if cta_background is not empty %} style="background-image: url('{{ cta_background }}');" {% endif %}>
+    {% block content %}
+      <div class="cta__inner">
+        <div class="cta__title">
+          {{ content.repeat_title.0 }}
+        </div>
+        <div class="cta__text">
+          {{ content.repeat_text.0 }}
+        </div>
+        <div class="cta__link">
+          {{ content.repeat_single_cta.0 }}
+        </div>
+      </div>
+    {% endblock %}
+  </div>
+{% endblock paragraph %}
