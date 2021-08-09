@@ -1,0 +1,41 @@
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--' ~ paragraph.bundle|clean_class,
+    'paragraph--' ~ paragraph.bundle|clean_class ~ '--' ~ view_mode|clean_class,
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+
+{{ attach_library('repeat_example/video') }}
+
+{% block paragraph %}
+  <div{{ attributes.addClass(classes) }} id="video__wrapper-{{ paragraph.id() }}">
+    {% block content %}
+    <div class="field__item"><p>On these examples we have 2 aspect ratios of youtube video calculated with js after the default 56.25% padding bottom method at&nbsp;<a href="http://embedresponsively.com/">embedresponsively.com</a></p>
+
+<p>The tall video works if we add width: 100% to it, but this PR destructs on git push :)</p></div>
+      <div class="l-video-container">
+        <div class="l-video__content">
+          <iframe src="/media/oembed?url=https%3A//www.youtube.com/watch%3Fv%3DoIhZog5n4K8&amp;max_width=0&amp;max_height=0&amp;hash=9Y2RWmhnB6T4sHCUBOvSelQxj2TjFQ7owGU2itS2PKQ" frameborder="0" allowtransparency="" class="media-oembed-content" title="Taoti Creative - Web Accessibility"></iframe>
+        </div>
+      </div>
+
+      <div class="l-video-container">
+        <div class="l-video__content">
+          <iframe src="/media/oembed?url=https%3A//www.youtube.com/watch%3Fv%3DxRqI5R6L7ow&amp;max_width=0&amp;max_height=0&amp;hash=XWZq_XjmlBD62mKKFqA7saUZL19Gs0uKfdaCQ84CGlA" frameborder="0" allowtransparency="" class="media-oembed-content" title="Elis Regina, Águas de Março"></iframe>
+        </div>
+      </div>
+
+      <div class="l-video-container">
+        <div class="l-video__content">
+        <video controls="controls">
+          <source src="https://www.exit109.com/~dnn/clips/RW20seconds_1.mp4" type="video/mp4">
+        </video>
+        </div>
+      </div>
+    {% endblock %}
+  </div>
+{% endblock paragraph %}
