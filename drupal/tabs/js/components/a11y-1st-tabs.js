@@ -25,8 +25,6 @@ class TabController {
       tab.addEventListener('keydown', e => {
         if (e.keyCode == 13 || e.keyCode == 32) { // return or space
           e.preventDefault();
-		  console.log(e.keyCode);
-		  console.log('starman');
           this.setActiveTab(tab.getAttribute('aria-controls'));
         }
       })
@@ -78,7 +76,13 @@ class TabController {
     }
   }
 }
-	//We would need to have one for each on Tabbed content component on the page, see notes in field--field-repeat-tab-items.html
-const tabController = new TabController('#repeat-tab-items');
+
+const tabElements = document.querySelectorAll('.paragraph--repeat-tabbed-content .tab-container');
+const tabControllers = [];
+
+for (let i = 0; i < tabElements.length; i++ ) {
+  let tabWidgetId = '#' + tabElements[i].getAttribute('id');
+  tabControllers[i] = new TabController(tabWidgetId);
+}  
 
 })(jQuery);

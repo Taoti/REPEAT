@@ -51,7 +51,24 @@
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
-      {{ content }}
+      {# content #}
+      <div id="repeat-tab-items-{{ paragraph.id() }}" class="tab-container" data-id="{{ paragraph.id() }}">
+        <ul aria-controls="tab-career-tracts" role="tablist">
+          {% for item in content.field_repeat_tab_items|field_value %}
+            <li role="tab" id="repeat_tab_label_p-paragraphid-n-{{ item['#paragraph'].id() }}" aria-controls="tab-{{ item['#paragraph'].id() }}" tabindex="0" {{ loop.first ? 'aria-selected="true"' : 'aria-selected="false"'}}>
+              {{ item['#paragraph'].field_repeat_tab.value }}
+            </li>
+          {% endfor %}          
+        </ul>
+        <main>
+          {% for item in content.field_repeat_tab_items|field_value %}
+            <div id="tab-{{ item['#paragraph'].id() }}" aria-labelledby="repeat_tab_label_p-paragraphid-n-{{ item['#paragraph'].id() }}" role="tabpanel" {{ loop.first ? 'aria-expanded="true"' : 'aria-expanded="false"'}}>
+              {{ item }}
+            </div>
+          {% endfor %}          
+        </main>  
+      </div>  
     {% endblock %}
   </div>
 {% endblock paragraph %}
+{{ attach_library('repeat_example/a11y-1st-tabs') }}
