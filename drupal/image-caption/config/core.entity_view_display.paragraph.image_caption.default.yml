@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.image_caption.repeat_image
+    - field.field.paragraph.image_caption.repeat_image_caption
+    - paragraphs.paragraphs_type.image_caption
+id: paragraph.image_caption.default
+targetEntityType: paragraph
+bundle: image_caption
+mode: default
+content:
+  repeat_image:
+    type: entity_reference_entity_view
+    weight: 0
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  repeat_image_caption:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+hidden: {  }
