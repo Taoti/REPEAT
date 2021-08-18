@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+id: repeat_tabbed_content
+label: 'Tabbed content'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

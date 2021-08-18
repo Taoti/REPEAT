@@ -1,0 +1,38 @@
+uuid: ef515004-395a-4a98-b48a-6473577d35ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.repeat_tab_item.field_repeat_tab
+    - field.field.paragraph.repeat_tab_item.field_repeat_tab_panel
+    - paragraphs.paragraphs_type.repeat_tab_item
+  module:
+    - paragraphs
+id: paragraph.repeat_tab_item.default
+targetEntityType: paragraph
+bundle: repeat_tab_item
+mode: default
+content:
+  field_repeat_tab:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_repeat_tab_panel:
+    type: entity_reference_paragraphs
+    weight: 1
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true
