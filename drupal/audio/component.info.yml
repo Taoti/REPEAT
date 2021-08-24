@@ -1,0 +1,9 @@
+name: 'Audio'
+description: 'An audio component on a11y slick slider'
+post-install notes: ''
+dependencies:
+  components:
+  composer:
+    drupal/paragraphs: ^1.11
+  extensions:
+    - paragraphs
