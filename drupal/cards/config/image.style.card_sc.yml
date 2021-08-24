@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: card_sc
+label: 'Card - cropped (619 x 347 - scale 1.78:1)'
+effects:
+  647d51d2-727a-496a-9db9-de2ce310d439:
+    uuid: 647d51d2-727a-496a-9db9-de2ce310d439
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 619
+      height: 347
+      anchor: center-center

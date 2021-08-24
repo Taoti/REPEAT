@@ -1,0 +1,63 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.repeat_paragraph_reference
+    - node.type.component_standard
+    - paragraphs.paragraphs_type.accordion
+    - paragraphs.paragraphs_type.card_layout
+    - paragraphs.paragraphs_type.cta_section
+    - paragraphs.paragraphs_type.hero_layout
+    - paragraphs.paragraphs_type.image_text_feature
+    - paragraphs.paragraphs_type.quote
+    - paragraphs.paragraphs_type.view_embed
+  module:
+    - entity_reference_revisions
+id: node.component_standard.repeat_paragraph_reference
+field_name: repeat_paragraph_reference
+entity_type: node
+bundle: component_standard
+label: 'Paragraph reference'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      accordion: accordion
+      card_layout: card_layout
+      cta_section: cta_section
+      hero_layout: hero_layout
+      image_text_feature: image_text_feature
+      quote: quote
+      view_embed: view_embed
+    target_bundles_drag_drop:
+      accordion:
+        enabled: true
+        weight: 3
+      accordion_item:
+        weight: 4
+        enabled: false
+      card_layout:
+        enabled: true
+        weight: 10
+      cta_section:
+        enabled: true
+        weight: 11
+      hero_layout:
+        enabled: true
+        weight: 12
+      image_text_feature:
+        enabled: true
+        weight: 13
+      quote:
+        enabled: true
+        weight: 14
+      view_embed:
+        enabled: true
+        weight: 16
+field_type: entity_reference_revisions
