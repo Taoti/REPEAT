@@ -1,9 +1,8 @@
-uuid: 2cd2b484-6c8e-4ec5-a636-58e3dd13b80d
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.quote_slider.field_repeat_quote_slides
+    - field.field.paragraph.quote_slider.repeat_quote_slides
     - paragraphs.paragraphs_type.quote_slider
   module:
     - paragraphs
