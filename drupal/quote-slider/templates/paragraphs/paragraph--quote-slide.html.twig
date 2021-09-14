@@ -39,7 +39,7 @@
  */
 #}
 
-{% set title = content.field_text_short_plain_0.0['#context'].value %}
+
 
 {%
   set classes = [
@@ -57,10 +57,10 @@
   {# Using generic template to quote #}
   {% include '@repeat_example/components/quote-slide.html.twig' with {
     'modifier': 'quote-slide--' ~ paragraph.bundle()|clean_class,
-    'quote_title': content.field_text_short_plain_0|field_value,
-    'quote_text': content.field_repeat_quote_slide_text|field_value,
-    'quote_attr': content.field_repeat_quote_slide_attr|field_value,
-    'quote_image': content.field_repeat_quote_slide_image|field_value,
+    'quote_title': 'quote-slide-paragraph.id()' ~ ,
+    'quote_text': content.repeat_quote_slide_text|field_value,
+    'quote_attr': content.repeat_quote_slide_attr|field_value,
+    'quote_image': content.repeat_quote_slide_image|field_value,
     'quote_id': paragraph.id()
   } %} 
 {% endblock paragraph %}

@@ -11,7 +11,7 @@ targetEntityType: paragraph
 bundle: quote_slider
 mode: default
 content:
-  field_repeat_quote_slides:
+  repeat_quote_slides:
     type: entity_reference_revisions_entity_view
     weight: 0
     label: above

@@ -4,7 +4,7 @@ dependencies:
   module:
     - paragraphs
 id: paragraph.repeat_quote_slide_text
-field_name: field_repeat_quote_slide_text
+field_name: repeat_quote_slide_text
 entity_type: paragraph
 type: string_long
 settings:
