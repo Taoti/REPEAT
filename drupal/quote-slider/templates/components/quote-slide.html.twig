@@ -1,0 +1,17 @@
+<div class="quote-slide {{ modifier }}"  data-title="{{ quote_title }}">
+  <div class="quote-slide__wrapper">
+    <div class="quote-slide__slide">
+      <div class="quote-slide__text">
+        <h2>&ldquo;{{ quote_text }}&rdquo;</h2>
+        <div class="quote-slide__attr">
+          &mdash;{{ quote_attr }}
+        </div>
+      </div>
+      {% if quote_image %}
+        <div class="quote-slide__image">
+          {{ quote_image }}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>

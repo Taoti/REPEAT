@@ -1,0 +1,29 @@
+uuid: 2cd2b484-6c8e-4ec5-a636-58e3dd13b80d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.quote_slider.field_repeat_quote_slides
+    - paragraphs.paragraphs_type.quote_slider
+  module:
+    - paragraphs
+id: paragraph.quote_slider.default
+targetEntityType: paragraph
+bundle: quote_slider
+mode: default
+content:
+  field_repeat_quote_slides:
+    type: entity_reference_paragraphs
+    weight: 0
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true

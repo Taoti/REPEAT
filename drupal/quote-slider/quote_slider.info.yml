@@ -1,0 +1,7 @@
+name: quote-slider
+type: theme
+description: a11y Slick slider for nested quotes PT
+dependencies:
+  extensions:
+    - paragraphs
+    - media
