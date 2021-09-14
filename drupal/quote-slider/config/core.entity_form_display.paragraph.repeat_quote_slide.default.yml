@@ -13,7 +13,7 @@ targetEntityType: paragraph
 bundle: quote_slide
 mode: default
 content:
-  field_repeat_quote_slide_attr:
+  repeat_quote_slide_attr:
     weight: 1
     settings:
       size: 60
@@ -21,14 +21,14 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_repeat_quote_slide_image:
+  repeat_quote_slide_image:
     type: media_library_widget
     weight: 2
     settings:
       media_types: {  }
     third_party_settings: {  }
     region: content
-  field_repeat_quote_slide_text:
+  repeat_quote_slide_text:
     weight: 3
     settings:
       rows: 5
