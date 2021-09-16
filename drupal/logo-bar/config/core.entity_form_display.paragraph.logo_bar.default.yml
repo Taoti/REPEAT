@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.logo_bar.repeat_companies
+    - paragraphs.paragraphs_type.logo_bar
+id: paragraph.logo_bar.default
+targetEntityType: paragraph
+bundle: logo_bar
+mode: default
+content:
+  repeat_companies:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden:
+  created: true
+  status: true
