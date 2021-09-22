@@ -1,0 +1,20 @@
+<div class="card {{ modifier }}">
+    <a href="{{ card_url }}" aria-labelledby="card_label__{{ card_id }}" class="card__href">
+        {% if card_image %}
+            <div href="{{ card_url }}" class="card__img_bg" style="background-image: url('{{ card_image }}');background-size: cover;"></div>
+            <img src="{{ card_image }}" alt="{{ card_image_alt }}"  class="card_details_img visually-hidden" />
+        {% endif %}
+
+        <h3 class="card__title" id="card_label__{{ card_id }}" aria-label="{{ card_title }}">{{ card_title }}</h3>
+        {% if card_linked == false %}
+    </a>
+    {% endif %}
+
+    <div class="card__content">
+        {{ card_content }}
+    </div>
+
+    {% if card_linked %}
+        </a>
+    {% endif %}
+</div>
