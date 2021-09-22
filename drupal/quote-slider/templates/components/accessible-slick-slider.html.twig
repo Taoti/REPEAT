@@ -1,0 +1,14 @@
+{# We check if we should use the regular slider library or one with a specific configuration #}
+{% if library is empty %}
+   {% set library = 'accessibleSlick' %}
+{% endif %}
+<div class="accessible-slick-slider {{ modifier }}" id="accessible-slick-slider-{{ slider_id }}">
+  <div class="accessible-slick-slider__slides">
+   {% for slide in slides %}
+     <div class="accessible-slick-slider__slide">
+       {{ slide }}
+     </div>
+   {% endfor %}
+  </div>
+</div>
+{{ attach_library('theme/' ~ library ) }}

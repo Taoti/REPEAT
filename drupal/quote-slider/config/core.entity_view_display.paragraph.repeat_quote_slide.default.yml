@@ -1,0 +1,38 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.quote_slide.repeat_quote_slide_attr
+    - field.field.paragraph.quote_slide.repeat_quote_slide_image
+    - field.field.paragraph.quote_slide.repeat_quote_slide_text
+    - paragraphs.paragraphs_type.quote_slide
+id: paragraph.quote_slide.default
+targetEntityType: paragraph
+bundle: quote_slide
+mode: default
+content:
+  repeat_quote_slide_attr:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  repeat_quote_slide_image:
+    type: entity_reference_entity_view
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: media_library
+      link: false
+    third_party_settings: {  }
+    region: content
+  repeat_quote_slide_text:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+hidden: {  }

@@ -1,0 +1,30 @@
+.accessible-slick-slider {
+  .slick-track {
+    .slick-slide {
+      > div,
+      .field__item{
+        height: 100%;
+      }
+    }
+  }
+
+  .slick-prev {
+    left: -25px;
+    @include mobile-up {
+      left: 35px;
+    }
+  }
+  .slick-next {
+    right: -25px;
+    @include mobile-up {
+      right: 35px;
+    }
+  }
+}
+
+.accessible-slick-slider--quote {
+  @include layout-breakout;
+  background: $color--gray-dark;
+  border-bottom: none;  
+  padding: 0;  
+}
