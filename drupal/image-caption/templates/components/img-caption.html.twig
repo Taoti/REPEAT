@@ -1,0 +1,16 @@
+<div class="img-caption {{ modifier }}" id="img-caption-{{ id }}">
+  <div class='img-caption__container'>
+    {% for item in images %}
+      {% set length_modifier = images|length >= 3 
+        ? 'img-caption__content--3' 
+        : 'img-caption__content--' ~ images|length 
+      %}
+      <div class='img-caption__content {{ length_modifier }}'>
+        <div class='img-caption__item'>
+          <img class='img-caption__image' alt='{{ item.imageAlt }}' src='{{ item.imageUrl }}' />
+          <p class='img-caption__caption'>{{ item.copy }}</p>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
