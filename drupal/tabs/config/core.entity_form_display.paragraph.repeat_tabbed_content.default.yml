@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.repeat_tabbed_content.repeat_tab_items
+    - paragraphs.paragraphs_type.repeat_tabbed_content
+  module:
+    - paragraphs
+id: paragraph.repeat_tabbed_content.default
+targetEntityType: paragraph
+bundle: repeat_tabbed_content
+mode: default
+content:
+  field_repeat_tab_items:
+    type: entity_reference_paragraphs
+    weight: 0
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true
