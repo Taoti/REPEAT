@@ -1,0 +1,63 @@
+#  Global library
+global:
+  version: 1.0
+  css:
+    theme:
+      css/main.css: { weight: -10 }
+  js:
+    js/main.js: { minified: false, weight: -10 }
+  dependencies:
+    - core/drupal
+    - core/jquery
+
+
+normalize:
+  remote: https://github.com/necolas/normalize.css
+  version: "8.0.1"
+  license:
+    name: MIT
+    url: https://github.com/necolas/normalize.css/blob/master/LICENSE.md
+    gpl-compatible: true
+  css:
+    base:
+      css/vendor/normalize.css: { weight: -10 }
+
+
+what-input:
+  remote: https://github.com/ten1seven/what-input
+  version: "5.0.5"
+  license:
+    name: MIT
+    url: https://github.com/ten1seven/what-input/blob/master/LICENSE
+    gpl-compatible: true
+  js:
+    js/vendor/what-input.min.js: { minified: true, weight: -5 }
+
+
+menu--main:
+  js:
+    js/components/menu--main.js: { minified: false }
+
+
+# REPEAT: Accordion
+accordion:
+  js:
+    js/components/accordion.js: { minified: false }
+
+# REPEAT: Audio
+audio:
+  js:
+    js/components/audio.behavior.js: { minified: false }
+
+
+# REPEAT: Accessible Slick slider
+accessibleSlick:
+  css:
+    base:
+      '//cdn.jsdelivr.net/npm/@accessible360/accessible-slick@1.0.1/slick/slick.min.css': { external: true, minified: true, weight: -9}
+      '//cdn.jsdelivr.net/npm/@accessible360/accessible-slick@1.0.1/slick/slick-theme.min.css': { external: true, minified: true, weight: -9}
+  js:
+    '//cdn.jsdelivr.net/npm/@accessible360/accessible-slick@1.0.1/slick/slick.min.js':  { external: true, minified: true, weight: -9}
+    js/components/accessibleSlick.behavior.js: { minified: false }
+  dependencies:
+    - core/drupal
