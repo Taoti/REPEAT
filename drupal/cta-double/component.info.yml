@@ -1,0 +1,7 @@
+name: 'Cta Double'
+description: '2 col cta grid'
+dependencies:
+  composer:
+    drupal/paragraphs: ^1.11
+  extensions:
+    - paragraphs

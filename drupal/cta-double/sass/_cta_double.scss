@@ -1,0 +1,29 @@
+.cta-double {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cta-double__item{
+  padding: 64px 120px;
+  background-color: #D9EFFF;
+  width: 50%;
+  
+  @media (max-width: $width--m) {
+    width: 100%;
+  }
+  
+  &:nth-child(odd){
+    background-color: #BCE0FD;
+  }
+}
+
+.cta-double__cta-link {
+  padding: 8px 16px;
+  width: fit-content;
+  background: #7FC4FD;
+  
+  a {
+    font-size: 14px;
+    color: black;
+  }
+}
