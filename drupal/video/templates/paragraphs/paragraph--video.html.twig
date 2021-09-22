@@ -1,0 +1,26 @@
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--' ~ paragraph.bundle|clean_class,
+    'paragraph--' ~ paragraph.bundle|clean_class ~ '--' ~ view_mode|clean_class,
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+
+{% set component_class =  'paragraph--' ~ paragraph.bundle|clean_class %}
+
+{{ attach_library('repeat_example/video') }}
+
+{% block paragraph %}
+  <div{{ attributes.addClass(classes) }} id="{{ component_class }}-{{ paragraph.id() }}">
+    {% block content %}
+      <div class="{{ component_class }}__container">
+        <div class="{{ component_class }}__content">
+          {{ content }}
+        </div>
+      </div>
+    {% endblock %}
+  </div>
+{% endblock paragraph %}

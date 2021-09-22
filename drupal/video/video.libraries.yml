@@ -1,0 +1,6 @@
+#  Global library
+
+# REPEAT: Video
+video:
+  js:
+    js/components/video.js: { minified: false }

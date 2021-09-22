@@ -1,0 +1,47 @@
+.paragraph--video {
+	padding: 2rem;
+
+	@media (max-width: $width--xs) {
+		padding: 1rem;
+	}
+/*  
+*	Styles for no js below, this is the common application from embedresponsively.com:
+
+	.media--type-video,
+	.media--type-remote-video {
+		.field--name-field-media-oembed-video,
+		.field--name-field-media-video-file {
+			position: relative;
+			padding-bottom: 56.25%;
+			height: 0;
+
+			iframe, video {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;			
+			}
+		}
+	}
+*/
+
+/*
+*	Default styles for js-added media wrapper and elements from /js/components/video.js which calculates the actual aspect ratio of the media element and adjusts padding-bottom accordingly  
+*
+*/
+	.fitVids-wrapper {
+		position: relative;
+		padding-bottom: 56.25%;
+		height: 0;
+	  
+		iframe,
+		video {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
