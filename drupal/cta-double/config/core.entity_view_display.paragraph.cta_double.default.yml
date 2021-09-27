@@ -1,0 +1,24 @@
+uuid: 85ec79ac-e5d5-4fdc-9103-f65fda6bd03d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cta_double.field_repeat_cta_double
+    - paragraphs.paragraphs_type.cta_double
+  module:
+    - entity_reference_revisions
+id: paragraph.cta_double.default
+targetEntityType: paragraph
+bundle: cta_double
+mode: default
+content:
+  field_repeat_cta_double:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }
