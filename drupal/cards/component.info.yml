@@ -4,8 +4,10 @@ post-install notes: ''
 dependencies:
   components:
   composer:
-    drupal/paragraphs: ^1.12
+    drupal/paragraphs: ^1.5
     drupal/svg_image: ^1.14
+    drupal/viewsreference: ^1.7
   extensions:
     - paragraphs
     - svg_image
+    - viewsreference
