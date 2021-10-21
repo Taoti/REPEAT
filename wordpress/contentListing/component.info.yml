@@ -1,0 +1,7 @@
+name: 'Content Listing'
+description: 'Content Listing landing page. Loads a solid Archive page, with filtering using a customizable WP_Query.'
+post-install notes: ''
+dependencies:
+  components:
+  composer:
+  plugins:

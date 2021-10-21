@@ -1,0 +1,102 @@
+.cards {
+	@include mq(tablet) {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+}
+
+.card {
+	border-bottom: 2px solid $white;
+	box-shadow: $box-shadow;
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto 40px;
+	max-width: 400px;
+	min-height: 345px;
+	min-width: 260px;
+	position: relative;
+
+	.cards--3 & {
+		min-height: 425px;
+
+		@include mq(tablet) {
+			flex: 1;
+		}
+
+		& + .card {
+			@include mq(tablet) {
+				margin-left: 4%;
+			}
+
+			@include mq(desktop) {
+				margin-left: 6%;
+			}
+		}
+
+		&-image {
+			@include aspect-ratio(4, 3);
+		}
+	}
+
+	.cards--4 & {
+
+		@include mq(tablet) {
+			width: 48%;
+		}
+
+		@include mq(desktop) {
+			flex: 1;
+			width: auto;
+		}
+
+		& + .card {
+			@include mq(desktop) {
+				margin-left: 2%;
+			}
+		}
+	}
+
+	&:hover {
+		box-shadow: 0px 3px 30px #00000029;
+		border-color: $green-2;
+	}
+
+	&-image {
+		@include aspect-ratio(1, 0.55);
+		background: url("") no-repeat center / cover, $pigeon;
+	}
+
+	&-content {
+		display: flex;
+		flex: 1;
+		flex-direction: column;
+		padding: 20px;
+	}
+
+	&-date {
+		margin-top: auto;
+		font-weight: 500;
+		padding-top: 25px;
+	}
+
+	&-title {
+		font-size: 22px;
+		line-height: 1.2;
+		margin-bottom: 10px;
+
+		a {
+			color: inherit;
+			text-decoration: none;
+
+			&:before {
+				@include parent-fill;
+				content: "";
+			}
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}

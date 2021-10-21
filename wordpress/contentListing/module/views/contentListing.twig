@@ -1,0 +1,19 @@
+{% block contentListing %}
+<div class="{{ classes }}">
+	<div class="contentListing-inner">
+
+		{% if primary_heading %}
+		<h2 class="contentListing-primaryHeading">{{ primary_heading }}</h2>
+		{% endif %}
+
+		{% if description %}
+		<div class="contentListing-description">{{ description }}</div>
+		{% endif %}
+
+		{% if button_url and button_label %}
+		<a class="contentListing-button" href="{{ button_url }}">{{ button_label }}</a>
+		{% endif %}
+
+	</div>
+</div>
+{% endblock %}
