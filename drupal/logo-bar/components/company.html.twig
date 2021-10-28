@@ -1,0 +1,16 @@
+<div class="company {{ modifier }}">
+  {% if company_url %}
+    <a href="{{ company_url }}" aria-label="{{ company_title }}" class="company__href">
+    {% else %}
+      <div href="{{ company_url }}" aria-label="{{ company_title }}" class="company__href">
+      {% endif %}
+      {% if company_image %}
+        <div href="{{ company_url }}" class="company__img_bg" style="background: url('{{ company_image }}') center no-repeat;background-size:contain;"></div>
+        <img src="{{ company_image }}" alt="{{ company_image_alt }}" class="company_details_img visually-hidden"/>
+      {% endif %}
+      {% if company_url %}
+      </a>
+    {% else %}
+    </div>
+  {% endif %}
+</div>
