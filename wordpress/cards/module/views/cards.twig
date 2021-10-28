@@ -1,0 +1,23 @@
+{% block cards %}
+<div class="cards cards--{{ count }}">
+	{% if cards %}
+	{% for card in cards %}
+	<div class="card">
+		{% if card.image %}
+		<div class="card-image" style="background-image: url('{{ card.image }}')"></div>
+		{% endif %}
+		<div class="card-content">
+			<div class="card-title"><a href="{{ card.link }}">{{ card.title }}</a></div>
+			<div class="card-summary">{{ card.summary }}</div>
+			{% if card.date %}
+			<div class="card-date">{{ card.date }}</div>
+			{% endif %}
+			{% if card.author %}
+				<div class="card-author">{{ card.author }}</div>
+			{% endif %}
+		</div>
+	</div>
+	{% endfor %}
+	{% endif %}
+</div><!-- END .cards -->
+{% endblock %}
