@@ -1,0 +1,15 @@
+<div class="cta-double {{ modifier }}" id="cta-double-{{ id }}" >
+  {% for item in items %}
+    <div class='cta-double__item' aria-labelledby='cta-double__item-{{ item.itemId }}' >
+      <h3 class="cta-double__title" id="cta-double__item-{{ item.itemId }}">
+        {{ item.title }}
+      </h3>
+      <p class="cta-double__copy">{{ item.copy }}</p>
+      <div class='cta-double__cta-link'>
+        <a class="cta-double__link" href='{{ item.cta.url }}' aria-labelledby='cta-double__item-{{ item.itemId }}'>
+          {{ item.cta.text }}
+        </a>
+      </div>
+    </div>
+  {% endfor %}
+</div>

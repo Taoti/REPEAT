@@ -1,0 +1,52 @@
+uuid: f7a86d93-5694-4a59-8971-4c0b8d49fc2b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_paragraph_reference
+    - node.type.component_standard
+    - paragraphs.paragraphs_type.accordion_item
+  module:
+    - entity_reference_revisions
+id: node.component_standard.field_paragraph_reference
+field_name: field_paragraph_reference
+entity_type: node
+bundle: component_standard
+label: 'Paragraph reference'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 1
+    target_bundles:
+      accordion_item: accordion_item
+    target_bundles_drag_drop:
+      accordion:
+        weight: 3
+        enabled: false
+      accordion_item:
+        enabled: true
+        weight: 4
+      card_layout:
+        weight: 10
+        enabled: false
+      cta_section:
+        weight: 11
+        enabled: false
+      hero_layout:
+        weight: 12
+        enabled: false
+      image_text_feature:
+        weight: 13
+        enabled: false
+      quote:
+        weight: 14
+        enabled: false
+      two_column_node_teaser:
+        weight: 16
+        enabled: false
+field_type: entity_reference_revisions

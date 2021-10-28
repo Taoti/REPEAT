@@ -1,0 +1,18 @@
+{%
+    set classes = [
+    'card--' ~ node.bundle()|clean_class,
+    'card--details'
+]
+%}
+
+{# Using generic template to card #}
+{% include '@repeat_example/components/card.html.twig' with {
+    'modifier': classes|join(' '),
+    'card_url': url,
+    'card_image': content.field_repeat_media_image|render|striptags|trim,
+    'card_image_alt': node.field_repeat_media_image.entity.field_media_image.alt,
+    'card_id': node.id,
+    'card_title': label|field_value,
+    'card_content': content|without('field_repeat_media_image', 'label'),
+    'card_linked': false
+} %}

@@ -1,0 +1,101 @@
+// JS Fiddle https://jsfiddle.net/link2twenty/v2d1htzx/
+// Tabs built based on the article at https://dev.to/link2twenty/accessibility-first-tabs-ken
+
+.tab-container {
+  @include container-full;
+  overflow: hidden;
+  padding: 20px 10px;
+}
+
+.tab-container [role=tablist] {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.tab-container [role=tab] {
+  position: relative;
+  list-style: none;
+  text-align: center;
+  cursor: pointer;
+  padding: 14px;
+  flex-grow: 1;
+  background-color: #fbfbfb;
+  color: #868686;
+  font-size: 1.2rem;
+  font-weight: 600;
+  box-shadow: 0 0 10px $color--gray;
+  z-index: 1;
+
+  & + [role=tab] {
+    margin-left: 15px;
+  }
+}
+
+.tab-container [role=tab][aria-selected=true] {
+    background-color: #ed3403;
+    -webkit-box-shadow: 0 0 0;
+    box-shadow: 0 0 0;
+    color: #fff;
+    border-radius: 0;
+    z-index: 3;
+}
+
+.tab-container [role=tab][aria-selected=true]::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  left: 0;
+  bottom: 0;
+}
+
+.tab-container [role=tab]:hover::before,
+.tab-container [role=tab][aria-selected=true]::before {
+  background-image: url("../assets/arrow-down.svg");
+  content: '';
+  display: block;
+  height: 20px;
+  width: 20px;
+  background-size: contain;
+  position: absolute;
+  top: -10px;
+  right: 50%;
+  transform: translateX(50%);
+}
+
+.tab-container main {
+  padding: 3rem;
+  position: relative;
+  background-color: $color--white;
+  box-shadow: 0 0 10px $color--gray;
+  z-index: 2;
+}
+
+.tab-container main [role=tabpanel] {
+  display: none;
+}
+
+.tab-container main [role=tabpanel][aria-expanded=true] {
+  display: block;
+}
+@media (max-width: #{$width--s - 1px}) {
+  .tab-container [role=tablist] {
+    flex-direction: column;
+  }
+
+  .tab-container [role=tab] {
+    margin-right: 15px;
+  }
+
+  .tab-container [role=tab][aria-selected=true] {
+    margin: 0!important;
+    order: 4;
+  }
+}
+
+@media (max-width: #{$width--xs - 1px}) {
+  .l-career-tract__copy > div {
+    flex-direction: column;
+  }
+}

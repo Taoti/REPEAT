@@ -1,0 +1,5 @@
+#  Global library
+
+a11y-1st-tabs:
+    js:
+      js/components/a11y-1st-tabs.js: { minified: false }

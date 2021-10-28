@@ -1,0 +1,23 @@
+.paragraph--accessible-slick-slider {
+  .slick-prev,.slick-next {
+    &-icon {
+      &:before {
+        font-size: 25px;
+        color: #000;
+      }
+    }
+    &:hover {
+      background-color: transparent;
+    }
+    &:focus {
+      background-color: transparent;
+    }
+  }
+  .slick-initialized .slick-slide {
+    display: flex;
+    justify-content: center;
+  }
+  article {
+    max-width: 300px;
+  }
+}

@@ -1,0 +1,24 @@
+#  Global library
+global:
+  version: 1.0
+  dependencies:
+    - core/drupal
+    - core/jquery
+
+
+
+slick:
+  remote: https://github.com/Accessible360/accessible-slick
+  version: "1.8.1"
+  license:
+    name: MIT
+    url: https://github.com/Accessible360/accessible-slick/blob/master/LICENSE
+    gpl-compatible: true
+  js:
+    js/vendor/slick.min.js: { minified: true, weight: -5 }
+
+accessibleSlick--quote:
+  js:
+    js/components/accessibleSlickQuote.behavior.js: { minified: false }
+  dependencies:
+    - repeat_example/slick

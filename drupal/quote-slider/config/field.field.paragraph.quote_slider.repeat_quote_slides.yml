@@ -1,0 +1,54 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.repeat_quote_slides
+    - paragraphs.paragraphs_type.quote_slide
+    - paragraphs.paragraphs_type.quote_slider
+  module:
+    - entity_reference_revisions
+id: paragraph.quote_slider.repeat_quote_slides
+field_name: repeat_quote_slides
+entity_type: paragraph
+bundle: quote_slider
+label: 'Quote slides'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      quote_slide: quote_slide
+    target_bundles_drag_drop:
+      accordion:
+        weight: 10
+        enabled: false
+      accordion_item:
+        weight: 11
+        enabled: false
+      card_layout:
+        weight: 12
+        enabled: false
+      cta_section:
+        weight: 13
+        enabled: false
+      hero_layout:
+        weight: 14
+        enabled: false
+      image_text_feature:
+        weight: 15
+        enabled: false
+      quote:
+        weight: 16
+        enabled: false
+      quote_slide:
+        enabled: true
+        weight: 17
+      quote_slider:
+        weight: 18
+        enabled: false
+field_type: entity_reference_revisions

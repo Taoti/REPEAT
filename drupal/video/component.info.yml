@@ -1,0 +1,3 @@
+name: 'Video'
+description: 'Responsive video PT component'
+post-install notes: 'This uses both the fitvids js method for aspect ratio as well as the padding method from embedresponsively.com as a fallback/default'
