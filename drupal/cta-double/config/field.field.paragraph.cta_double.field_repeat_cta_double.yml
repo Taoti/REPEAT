@@ -1,0 +1,52 @@
+uuid: 879fece2-e200-4e3f-b0c9-0cd62b142000
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_repeat_cta_double
+    - paragraphs.paragraphs_type.cta_double
+    - paragraphs.paragraphs_type.cta_section
+  module:
+    - entity_reference_revisions
+id: paragraph.cta_double.field_repeat_cta_double
+field_name: field_repeat_cta_double
+entity_type: paragraph
+bundle: cta_double
+label: 'CTA double'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      cta_section: cta_section
+    target_bundles_drag_drop:
+      accordion:
+        weight: 9
+        enabled: false
+      accordion_item:
+        weight: 10
+        enabled: false
+      card_layout:
+        weight: 11
+        enabled: false
+      cta_double:
+        weight: 12
+        enabled: false
+      cta_section:
+        enabled: true
+        weight: 13
+      hero_layout:
+        weight: 14
+        enabled: false
+      image_text_feature:
+        weight: 15
+        enabled: false
+      quote:
+        weight: 16
+        enabled: false
+field_type: entity_reference_revisions
