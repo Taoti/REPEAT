@@ -157,7 +157,3 @@ wordpress:
       - description
       - button_label
       - button_url
-  block:
-    fields:
-      - primary_heading
-      - content
