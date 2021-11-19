@@ -13,7 +13,7 @@ use JP\Get;
 	// $new_module = new CTA($args);
 	// $new_module->render();
 
-class Block {
+class TextBlock {
 	protected $defaults;
 	protected $context;
 
@@ -23,7 +23,7 @@ class Block {
 			'content' => false,
 			'classes' => [
 				'l-module',
-				'block',
+				'textBlock',
 			]
 		];
 		extract(array_merge($this->defaults, $args));
@@ -43,7 +43,7 @@ class Block {
 	}
 
 	public function render(){
-		Timber::render('block.twig', $this->context);
+		Timber::render('textBlock.twig', $this->context);
 	}
 
 }

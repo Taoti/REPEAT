@@ -1,7 +1,0 @@
-name: 'Block'
-description: ''
-post-install notes: ''
-dependencies:
-  components:
-  composer:
-  plugins:
