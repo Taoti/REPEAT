@@ -1,0 +1,15 @@
+{% block textBlock %}
+<div class="{{ classes }}l-module textBlock"{% if id %} id="{{ id }}"{% endif %}>
+	<div class="l-inner textBlock-inner">
+
+		{% if primary_heading %}
+			<h2 class="dark">{{ primary_heading }}</h2>
+		{% endif %}
+
+		{% if content %}
+			<div class="textBlock-description entry-content">{{ content }}</div>
+		{% endif %}
+
+	</div>
+</div>
+{% endblock %}

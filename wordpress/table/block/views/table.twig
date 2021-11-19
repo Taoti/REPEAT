@@ -1,0 +1,27 @@
+{% block table %}
+	<div class="{{ classes }}" {% if id %} id="{{ id }}" {% endif %}>
+		<div class="l-inner table-inner">
+
+			{% if buttons %}
+				<div class="btn-container">
+					{% if primary_heading %}
+						<h2 class="dark">{{ primary_heading }}</h2>
+					{% endif %}
+					{% for button in buttons %}
+						<a href="{{ button.button_url }}" class="btn-filled">
+							{{ button.button_label }}
+						</a>
+					{% endfor %}
+				</div>
+			{% endif %}
+
+			{% if table_html %}
+				<div class="table-main">{{ table_html }}
+				</div>
+			{% endif %}
+			{% if table_annotation %}
+				<span class="reduced-text dark">{{ table_annotation }}</span>
+			{% endif %}
+		</div>
+	</div>
+{% endblock %}

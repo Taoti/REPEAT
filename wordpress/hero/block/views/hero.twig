@@ -1,0 +1,22 @@
+{% block hero %}
+<div class="{{ classes }}" {% if background_image_url %} data-bg="{{ background_image_url }}" {% endif %}>
+	<div class="hero-overlay {{ overlay_options  }}">
+	</div>
+
+	<div class="l-container hero-inner">
+		<div class="breadcrumbs">
+			{{ breadcrumbs_output }}
+		</div>
+		{% if alternative_heading %}
+		<h1 class="hero-heading">{{ alternative_heading }}</h1>
+		{% else %}
+		<h1 class="hero-heading">{{ heading }}</h1>
+		{% endif %}
+
+		{% if description %}
+		<div class="hero-description">{{ description }}</div>
+		{% endif %}
+	</div>
+</div>
+</div>
+{% endblock %}
