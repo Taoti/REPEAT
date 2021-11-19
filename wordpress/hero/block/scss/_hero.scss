@@ -1,0 +1,137 @@
+.hero {
+    margin-top: 0;
+    background: $color-1;
+    padding-top: 8rem;
+    padding-bottom: 6rem;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+
+    svg {
+        width: 125%;
+        height: 400px;
+        opacity: 0.8;
+        fill: $color-1;
+
+    }
+}
+
+.hero-overlay {
+    background: url('/wp-content/themes/elder-research/images/landing-header-overlay-circle.svg') no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 76%;
+    height: 100%;
+    z-index: 1;
+
+    &.square {
+        background: url('/wp-content/themes/elder-research/images/landing-header-overlay-square.svg') no-repeat;
+        background-size: cover;
+        background-position: center center;
+
+    }
+
+    &.pentagon {
+        background: url('/wp-content/themes/elder-research/images/landing-header-overlay-pentagon.svg') no-repeat;
+        background-size: cover;
+        background-position: center center;
+
+    }
+
+}
+
+body:not(.single-blog):not(.single-events):not(.single-news):not(.single-people) {
+
+    .hero-heading,
+    .hero-description,
+    .breadcrumbs {
+        @media screen and (min-width: $breakpoint-tablet) {
+            max-width: 65%;
+
+        }
+
+        @media screen and (min-width: $breakpoint-desktop) {
+            width: 76%;
+
+        }
+
+    }
+
+    .hero-overlay {
+        width: 135%;
+        background-position: right;
+
+        @media screen and (min-width: $breakpoint-tablet) {
+            width: 100%;
+            background-position: right;
+
+        }
+
+        @media screen and (min-width: $breakpoint-desktop) {
+            width: 90%;
+            background-position: right;
+
+        }
+
+    }
+
+
+}
+
+
+
+.hero-heading {
+    color: $invert;
+    font-family: $serif;
+    padding-bottom: 2rem;
+    font-size: 3.2rem;
+    line-height: 3.2rem;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        font-size: 5.2rem;
+        line-height: 5.2rem;
+
+    }
+
+    &.max {
+        @media screen and (min-width: $breakpoint-tablet) {
+            max-width: 70%;
+
+        }
+    }
+
+
+}
+
+
+
+.hero-description {
+    color: $invert;
+    max-width: 75.2rem;
+    font-size: 1.8rem;
+
+
+}
+
+.hero-inner {
+    z-index: 2;
+    position: relative;
+}
+
+.breadcrumbs {
+    color: $invert;
+    font-size: 1.4rem;
+    padding-bottom: 2rem;
+}
+
+.breadcrumbs a {
+    color: $invert;
+
+
+    &:hover {
+        color: $color-2;
+    }
+}

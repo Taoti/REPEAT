@@ -1,0 +1,23 @@
+.quote-body {
+    background: $color-1 url('/wp-content/themes/acs-openaccess/images/Blue-Texture-Small-Background@2x.jpg');
+    color: $invert;
+    text-align: center;
+    padding: 2.4rem 3.6rem;
+
+    .quote-icon {
+        font-size: 4.6rem;
+        margin-bottom: -1.5rem;
+        display: block;
+
+        &:last-of-type {
+            margin-top: 0.5rem;
+
+        }
+    }
+
+
+    .quote-quotedText {
+        font-style: italic;
+    }
+
+}

@@ -1,0 +1,43 @@
+{% block accordion %}
+<div class="{{ classes }}"{% if id %} id="{{ id }}"{% endif %}>
+	{% if primary_heading %}
+	<h2 class="accordion-main-heading dark">{{ primary_heading }}</h2>
+	{% endif %}
+
+	<div class="accordion-inner">
+		{% if accordion_items %}
+		<ul class="accordion-list">
+			{% for row in accordion_items %}
+
+			<li class="accordion-listItem">
+
+				<input class="accordion-toggle" type="checkbox" id="accordion-{{unique_input_id_prefix}}-{{ loop.index0 }}">
+
+				<label class="accordion-headingLabel" for="accordion-{{unique_input_id_prefix}}-{{ loop.index0 }}">
+					<span class="accordion-heading">{{ row.title }}</span>
+					{% if row.subtitle %}
+					<span class="accordion-subheading">{{ row.subtitle }}</span>
+					{% endif %}
+					<i class="accordion-toggleIcon"></i>
+				</label>
+
+				<div class="accordion-text entry-content">
+					<div class="description">{{ row.description }}</div>
+					{% if row.buttons %}
+						{% for button in row.buttons %}
+						<a href="{{ button.button_url }}" class="btn-filled">
+							{{ button.button_label }}
+						</a>
+						{% endfor %}
+					{% endif %}
+				</div>
+
+			</li>
+
+			{% endfor %}
+		</ul>
+		{% endif %}
+
+	</div>
+</div>
+{% endblock %}

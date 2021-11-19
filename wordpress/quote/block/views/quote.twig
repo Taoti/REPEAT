@@ -1,0 +1,27 @@
+{% block quote %}
+	<div class="{{ classes }}" {% if id %} id="{{ id }}" {% endif %}>
+		<div class="quote-inner l-text-container">
+
+			{% if quoted_text %}
+				<div class="quote-body">
+
+					<i class="quote-icon">&#8220;</i>
+					<div class="quote-quotedText">
+						{{ quoted_text }}
+					</div>
+					<i class="quote-icon">&#8221;</i>
+
+					{% if primary_heading %}
+						<div class="">
+							<h3>{{ primary_heading }}</h3>
+						</div>
+					{% endif %}
+
+				</div>
+			{% endif %}
+
+		</div>
+		<!-- END .quote-inner -->
+	</div>
+	<!-- END .quote -->
+{% endblock %}

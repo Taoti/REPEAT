@@ -1,0 +1,25 @@
+{% block TextImage %}
+<div class="{{ classes }}"{% if id %} id="{{ id }}"{% endif %}>
+	<div class="l-inner textImage-inner">
+
+		<div class="textImage-container {{ image_orientation }}">
+			{% if image_html %}
+				{{ image_html }}
+			{% endif %}
+		</div>
+
+		<div class="text-container">
+			{% if primary_heading %}
+				<h2 class="dark">{{ primary_heading }}</h2>
+			{% endif %}
+			{% if description %}
+				<div class="textImage-description">{{ description }}</div>
+			{% endif %}
+			{% if button_label and button_url %}
+				<a href="{{ button_url }}" class="btn-filled">{{ button_label }}</a>
+			{% endif %}
+		</div>
+
+	</div>
+</div>
+{% endblock %}
