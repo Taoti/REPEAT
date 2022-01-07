@@ -1,36 +1,58 @@
+{#
+  This implementation is based on the WAI-ARIA Authoring Practices 1.1 example:
+  https://www.w3.org/TR/wai-aria-practices/examples/accordion/accordion.html
+#}
+
 {%
   set classes = [
-    'accordion',
-    'accordion--collapsed',
+    'accordion-item',
     'paragraph',
-    'paragraph--type--' ~ paragraph.bundle|clean_class,
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
     not paragraph.isPublished() ? 'paragraph--unpublished'
   ]
 %}
 
-{% block paragraph %}
-  <div{{ attributes.addClass(classes) }}>
-    {% block content %}
+{% set id = 'accordion-item--' ~ paragraph.id() %}
+{% set panelID = id ~ '__panel' %}
 
-      <div class="accordion__title accordion__trigger--toggle-accordion">
-        {{ content.repeat_title }}
+<article {{ attributes.addClass(classes) }}>
+  <h3 class="accordion-item__heading">
+    <button
+      class="accordion-item__toggle"
+      aria-expanded="false"
+      aria-controls="{{ panelID }}"
+      id="{{ id }}"
+    >
+      <span class="accordion-item__title">
+        {{- content.repeat_title|field_value -}}
+      </span>
 
-        <button class="accordion__toggle accordion__trigger--toggle-accordion">
-          <span class="accordion__toggle-label visually-hidden">expand and show content</span>
-          <div class="accordion__toggle-icon">
-            <div class="accordion__toggle-icon-horizontal"></div>
-            <div class="accordion__toggle-icon-vertical"></div>
-          </div>
-        </button>
-      </div>
+      {#
+        Empty spans probably won't show up to AT anyways,
+        but I'm intentionally adding aria-presentation here to
+        assert there's no semantic meaning and to keep them
+        from crowding any non-visual presentation no matter what. - JE
+      #}
+      <span class="accordion-item__icon" aria-presentation="true">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </span>
+    </button>
+  </h3>
 
-      <div class="accordion__content">
-        {{ content.repeat_content }}
-      </div>
-
-    {% endblock %}
+  <div
+    class="accordion-item__panel"
+    id="{{ panelID }}"
+    role="region"
+    aria-labelledby="{{ id }}"
+    hidden
+    style="display: none;"
+    {#
+      Our styling rules hide this also, but inline `display: none`
+      ensures this doesn't blink in momentarily,
+      causing a repaint/reflow, before .css is loaded - JE
+    #}
+  >
+    {{ content.repeat_content|field_value }}
   </div>
-{% endblock paragraph %}
-
-{{ attach_library('repeat_example/accordion') }}
+</article>
